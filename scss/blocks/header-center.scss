@@ -1,0 +1,31 @@
+.header-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    
+  }
+  &__search {
+    flex-grow: 1;
+    position: relative;
+  }
+  &__input {
+    width: 100%;
+  }
+  &__menu {
+    
+  }
+  &__list {
+    display: flex;
+    li {
+
+    }
+  }
+  &__zoom {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 13px;
+    right: 10px;
+  }
+}

@@ -1,34 +1,87 @@
 // header
 header.header#header
-	.wrapper
-		.header_container
 
-			// menu
-			//- .menu--left .menu--right
-			.js-menu.menu.menu--right
-				#menu-btn.menu__btn.hamburger.hamburger--squeeze
-					.hamburger-box
-						.hamburger-inner
-				nav#mmenu.menu__nav
-					ul.menu__list
-						li
-							a(href="#") Меню 1
-						li
-							a(href="#") Меню 2
-						li
-							a(href="#") Меню 3
-						li
-							a(href="#") Меню 4
-						li
-							a(href="#") Меню 5
-						li
-							a(href="#") Меню 6
-						li
-							a(href="#") Меню 7
-						li
-							a(href="#") Меню 8
-					#menu-close.menu__close
-				#menu-over.menu__over
-			// /menu
+	// .header-top
+	.header-top
+	
+		nav.header-top__menu
+			ul.header-top__list.header-top__list--gray-hover
+				li
+					a(href="#") ITCOM
+				li
+					a(href="#") CONSULT
+				li
+					a(href="#") SECURITY
+				li
+					a(href="#").active MARKET
+				li
+					a(href="#") ACADEMY
+				li
+					a(href="#") CLOUD
+
+		ul.header-top__list.header-top__list--orange-hover
+			li.header-top__city Санкт-Петербург
+				//- ul.header-top__drop
+				//- 	li
+				//- 		a(href="#") Москва
+				//- 	li
+				//- 		a(href="#") Екатеринбург
+				//- 	li
+				//- 		a(href="#") Новосибирск
+			li
+				a(href="#") Точки выдачи
+			li
+				a(href="tel:88006004149") 8 800 600 41 49
+	//	/.header-top
+
+	// header-center
+	.header-center
+
+		a(href="#").header-center__logo
+			img(src="img/logo.svg", alt="")
+
+		.btn Каталог
+
+		form(action="").header-center__search
+			input(type="text" placeholder="Поиск по сайту, товарам и разделам")#search.header-center__input.input
+			label(for="search").header-center__zoom
+				img(src="img/zoom.svg", alt="")
+
+		.header-center__menu
+			ul.header-center__list
+				li Статус заказа
+				li Войти
+				li Сравнение
+				li Ибранное
+				li Корзина
+	//	/header-center
+
+		//- // menu
+		//- //- .menu--left .menu--right
+		//- .js-menu.menu.menu--right
+		//- 	#menu-btn.menu__btn.hamburger.hamburger--squeeze
+		//- 		.hamburger-box
+		//- 			.hamburger-inner
+		//- 	nav.menu__nav
+		//- 		ul.menu__list
+		//- 			li
+		//- 				a(href="#") Меню 1
+		//- 			li
+		//- 				a(href="#") Меню 2
+		//- 			li
+		//- 				a(href="#") Меню 3
+		//- 			li
+		//- 				a(href="#") Меню 4
+		//- 			li
+		//- 				a(href="#") Меню 5
+		//- 			li
+		//- 				a(href="#") Меню 6
+		//- 			li
+		//- 				a(href="#") Меню 7
+		//- 			li
+		//- 				a(href="#") Меню 8
+		//- 		#menu-close.menu__close
+		//- 	#menu-over.menu__over
+		//- // /menu
 
 // /header

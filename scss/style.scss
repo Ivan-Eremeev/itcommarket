@@ -6,8 +6,8 @@
 
 // Переменные для кастомизации Mixingrid
 $columns: 12; // Колличество колонок
-$max-width: 1200px; // Максимальная ширина контейнера
-$gutter: 15px; // Расстояние между колонками
+$max-width: 1264px; // Максимальная ширина контейнера
+$gutter: 16px; // Расстояние между колонками
 $offset: 30px; // Поля контейнера
 $offset-sm: 15px; // Поля контейнера на мобилке
 // Брэйкпоинты
@@ -25,15 +25,21 @@ $break_xs: 500px;
 // $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
 
 // Шрифты
-// @include font-face("EastAP", "../fonts/EastAP/EastAP", bold, italic);
+@include font-face("RobotoCondensed", "../fonts/RobotoCondensed/RobotoCondensed-Light", 300, normal);
+@include font-face("RobotoCondensed", "../fonts/RobotoCondensed/RobotoCondensed-Regular", normal, normal);
+@include font-face("RobotoCondensed", "../fonts/RobotoCondensed/RobotoCondensed-Bold", bold, normal);
 
 // Цвета
-// $black: #000;
+$orange: #E65100;
+$orangeHover: k;
+$gray: #979797;
 
 // Подключение файлов
 @import 'blocks/settings';
 @import 'hamburgers/hamburgers';
 @import 'blocks/menu';
+@import 'blocks/header-top';
+@import 'blocks/header-center';
 // @import 'blocks/mmenu';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';
