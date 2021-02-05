@@ -69,7 +69,7 @@ slider1($('.js-slider-1'));
 
 // Слайдер с одним слайдом и кастомными стрелками
 function slider2(block) {
-  var slider = block.find('.js-slider-2');
+  var slider = block.find('.js-slider');
   if (slider.length) {
     slider.slick({
       swipe: true,
@@ -88,3 +88,27 @@ function slider2(block) {
   }
 }
 slider2($('.welcome__slider-container'));
+
+// Слайдер с 4 слайдами
+function slider3(block) {
+  var slider = block.find('.js-slider');
+  if (slider.length) {
+    slider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      swipe: true,
+      draggable: true,
+      arrows: false,
+      infinite: false,
+    });
+    // Кастомные стрелки
+    block.find('.slider-arrow--prev').on('click', function () {
+      slider.slick('slickPrev');
+      console.log('ll');
+    });
+    block.find('.slider-arrow--next').on('click', function () {
+      slider.slick('slickNext');
+    });
+  }
+}
+slider3($('.slider-cards'));

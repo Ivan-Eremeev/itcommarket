@@ -1,4 +1,5 @@
 .welcome {
+  margin-bottom: 54px;
   &__col {
     &--1 {
       @include col(12);
@@ -33,6 +34,19 @@
     overflow: hidden;
     &--card {
       box-shadow: $shadow;
+    }
+    &--banner {
+      .slick-arrow {
+        opacity: 0;
+      }
+      &:hover {
+        .slider-arrow {
+          opacity: 1;
+          &.slick-disabled {
+            opacity: 0;
+          }
+        }
+      }
     }
     .banner {
       border-radius: 0;

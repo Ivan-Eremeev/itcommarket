@@ -30,6 +30,7 @@ $break_xs: 500px;
 @include font-face("RobotoCondensed", "../fonts/RobotoCondensed/RobotoCondensed-Bold", bold, normal);
 
 // Переменные
+$black: #333;
 $orange: #E65100;
 $orangeHover: #C74600;
 $gray: #979797;
@@ -48,6 +49,12 @@ $shadow: 0 10px 20px rgba(0,0,0,.1);
 @import 'blocks/welcome';
 @import 'blocks/banner';
 @import 'blocks/card';
+@import 'blocks/sales';
+@import 'blocks/item';
+@import 'blocks/services';
+@import 'blocks/icon';
+@import 'blocks/popular';
+@import 'blocks/slider-cards';
 // @import 'blocks/mmenu';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';

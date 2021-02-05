@@ -1,0 +1,7 @@
+.services {
+  margin-bottom: 45px;
+  &__col {
+    @include col(4);
+    margin-bottom: $gutter;
+  }
+}

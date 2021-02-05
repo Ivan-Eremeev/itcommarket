@@ -15,6 +15,8 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
 include blocks/card.jade
+include blocks/item.jade
+include blocks/icon.jade
 
 block content
 
@@ -29,7 +31,7 @@ block content
 				.row
 				
 					.welcome__col.welcome__col--1
-						.welcome__slider.js-slider-1
+						.welcome__slider.welcome__slider--banner.js-slider-1
 							// banner
 							.banner
 								.banner__content 
@@ -63,7 +65,7 @@ block content
 
 					.welcome__col.welcome__col--2
 						.welcome__slider-container
-							.welcome__slider.welcome__slider--card.js-slider-2
+							.welcome__slider.welcome__slider--card.js-slider
 								+card
 								+card
 								+card
@@ -73,6 +75,81 @@ block content
 								img(src="img/arrow.svg")
 			//	welcome
 
+			// sales
+			.sales
+				.title.title--center Актуальные акции
+				.row 
+					.sales__col
+						+item('При покупке кассы в ITCOM Market','Электронная подпись со скидкой 30%')
+					.sales__col
+						+item('При заказе от 10 000 руб','Бесплатная доставка')
+					.sales__col
+						+item('Хотите узнать больше, как','Купить в рассрочку онлайн-кассу')
+					.sales__col
+						+item('При заказе от 5-ти касс Эвотор','Установка и настройка кассы в подарок')
+			//	/sales
+
+			// services
+			.services
+				.title-flex
+					.title Решения для вашего бизнеса
+					a(href="#").more-btn Все решения
+				.row 
+					.services__col
+						+icon('Интернет-магазин')
+					.services__col
+						+icon('Магазин розничной торговли')
+					.services__col
+						+icon('Минимаркет')
+					.services__col
+						+icon('Кафе и ресторан')
+					.services__col
+						+icon('Фастфуд')
+					.services__col
+						+icon('Бар')
+					.services__col
+						+icon('Салон красоты')
+					.services__col
+						+icon('Автосервис')
+			//	/services
+
+			// services
+			.services
+				.title-flex
+					.title Услуги для бесперебойной работы ККТ
+					a(href="#").more-btn Смотреть все услуги
+				.row 
+					.services__col
+						+item('Услуга','Ввод ККТ в эксплуатацию')
+					.services__col
+						+item('Услуга','Сопровождение вашей ККТ')
+					.services__col
+						+item('Услуга','Программное обновление ККТ')
+					.services__col
+						+item('Услуга','Ремонт ККТ')
+			//	/services
+
+			// popular
+			.popular
+				.title-flex
+					.title Популярные товары
+					a(href="#").more-btn Все товары
+				// slider-cards
+				.slider-cards
+
+					.js-slider
+						+card
+						+card
+						+card
+						+card
+						+card
+						+card
+					.slider-arrow.slider-arrow--prev
+						img(src="img/arrow.svg")
+					.slider-arrow.slider-arrow--next
+						img(src="img/arrow.svg")
+				//	/slider-cards
+			//	/popular
 			
 		include blocks/footer.jade
 
