@@ -3,7 +3,7 @@ html {
   height: 100%;
 }
 a {
-  transition: .3s;
+  transition: $trans;
   text-decoration: none;
 }
 button,
@@ -18,6 +18,7 @@ body {
   background-color: #fff;
   font-family: "RobotoCondensed", sans-serif;
   font-size: 14px;
+  color: #333;
   &.lock {
     position: fixed;
   }
@@ -35,23 +36,18 @@ body {
 .img-responsive {
   position: relative;
   overflow: hidden;
-  img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  svg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  &:after {
+  &:before {
     content: '';
     display: block;
     padding-top: 56.25%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 .row {
@@ -74,6 +70,7 @@ body {
 }
 .content {
   flex-grow: 1;
+  padding: 12px 0;
 }
 .btn {
   display: inline-block;
@@ -82,14 +79,69 @@ body {
   border-radius: 12px;
   color: #fff;
   cursor: pointer;
+  box-shadow: 0 10px 20px rgba(230,81,0,.4);
+  transition: $trans;
+  &:hover {
+    box-shadow: none;
+    background-color: $orangeHover;
+  }
 }
 .input {
   height: 48px;
   padding: 0 24px;
-  border: 1px solid #E6E6E6;
+  border: 1px solid #ababab;
   border-radius: 12px;
   &::placeholder {
     color: $gray;
+  }
+}
+.slick-slider {
+  &:hover {
+    .slider-arrow {
+      opacity: 1;
+      &.slick-disabled {
+        opacity: 0;
+      }
+    }
+  }
+}
+.slider-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: $trans;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  z-index: 2;
+  opacity: 0;
+  svg {
+    fill: #333;
+    transition: $trans;
+  }
+  &--prev {
+    left: 48px;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  &--next {
+    right:48px;
+  }
+  &:hover {
+    background-color: $orange;
+    svg {
+      fill: #fff;
+    }
+  }
+  &.slick-disabled {
+    opacity: 0;
   }
 }
 /* /settings */

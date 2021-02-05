@@ -10,9 +10,11 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
-	//- link(rel="stylesheet", href="css/libs/slick.css")
+	link(rel="stylesheet", href="css/libs/slick.css")
 	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+include blocks/card.jade
 
 block content
 
@@ -20,7 +22,56 @@ block content
 
 		include blocks/header.jade
 		
-		.content
+		main.content
+
+			// welcome
+			.welcome
+				.row
+				
+					.welcome__col.welcome__col--1
+						.welcome__slider.js-slider-1
+							// banner
+							.banner
+								.banner__content 
+									.banner__title Онлайн-касса<br>под ключ
+									.banner__text Регистрация. Подключение. Настройка.
+									.banner__subtext
+										p Наши эксперты подберут подходящую кассу для вашего бизнеса.
+										p Гарантия соответствия 54-ФЗ — 100%
+									.btn Выбрать кассу под ключ
+							//	/banner
+							// banner
+							.banner
+								.banner__content 
+									.banner__title Онлайн-касса<br>под ключ
+									.banner__text Регистрация. Подключение. Настройка.
+									.banner__subtext
+										p Наши эксперты подберут подходящую кассу для вашего бизнеса.
+										p Гарантия соответствия 54-ФЗ — 100%
+									.btn Выбрать кассу под ключ
+							//	/banner
+							// banner
+							.banner
+								.banner__content 
+									.banner__title Онлайн-касса<br>под ключ
+									.banner__text Регистрация. Подключение. Настройка.
+									.banner__subtext
+										p Наши эксперты подберут подходящую кассу для вашего бизнеса.
+										p Гарантия соответствия 54-ФЗ — 100%
+									.btn Выбрать кассу под ключ
+							//	/banner
+
+					.welcome__col.welcome__col--2
+						.welcome__slider-container
+							.welcome__slider.welcome__slider--card.js-slider-2
+								+card
+								+card
+								+card
+							.slider-arrow.slider-arrow--prev
+								img(src="img/arrow.svg")
+							.slider-arrow.slider-arrow--next
+								img(src="img/arrow.svg")
+			//	welcome
 
 			
 		include blocks/footer.jade
@@ -28,7 +79,7 @@ block content
 block js-libs
 	script(src="js/libs/jquery.min.js")
 	//- script(src="js/libs/jquery.fancybox.min.js")
-	//- script(src="js/libs/slick.min.js")
+	script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
 	//- script(src="js/libs/jquery.inputmask.min.js")
 	//- script(src="js/libs/autosize.min.js")

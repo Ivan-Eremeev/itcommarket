@@ -2,23 +2,61 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
   &__logo {
-    
+    margin-left: 15px;
+    margin-right: 30px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 10px;
+    }
   }
   &__search {
+    margin: 0 16px;
     flex-grow: 1;
     position: relative;
   }
   &__input {
     width: 100%;
+    border-color: #e6e6e6;
+    transition: $trans;
+    &:hover, &:focus {
+      border-color:$orange;
+    }
   }
   &__menu {
     
   }
   &__list {
     display: flex;
+    margin-left: -16px;
+    margin-right: -16px;
     li {
-
+      margin: 0 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: $trans;
+      white-space: nowrap;
+      color: $gray;
+      span {
+        display: block;
+      }
+      svg {
+        fill: $gray;
+        transition: $trans;
+        margin-bottom: 5px;
+      }
+      &:hover {
+        color: $orange;
+        svg {
+          fill: $orange;
+        }
+      }
     }
   }
   &__zoom {

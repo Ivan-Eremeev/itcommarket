@@ -1,0 +1,25 @@
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-left: -12px;
+    margin-right: -12px;
+    white-space: nowrap;
+    &:first-child {
+      margin-right: 12px;
+    }
+    li {
+      margin: 0 12px;
+    }
+    a {
+      color: #333;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}

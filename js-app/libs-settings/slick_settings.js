@@ -47,8 +47,44 @@ function slider(slider,sliderFor) {
     });
   }
 }
-slider();
+// slider();
 
 // $('.your-slider').slick('unslick'); // Уничтожить слайдер
 
 // $('.your-slider').slick('setPosition') // Переотрисовка слайдера. Например для использования в табах
+
+// Слайдер с одним слайдом
+function slider1(slider) {
+  if (slider.length) {
+    slider.slick({
+      swipe: true,
+      draggable: true,
+      prevArrow: '<div class="slider-arrow slider-arrow--prev"><img src="img/arrow.svg"></div>',
+      nextArrow: '<div class="slider-arrow slider-arrow--next"><img src="img/arrow.svg"></div>',
+      infinite: false,
+    });
+  }
+}
+slider1($('.js-slider-1'));
+
+// Слайдер с одним слайдом и кастомными стрелками
+function slider2(block) {
+  var slider = block.find('.js-slider-2');
+  if (slider.length) {
+    slider.slick({
+      swipe: true,
+      draggable: true,
+      arrows: false,
+      infinite: false,
+    });
+    // Кастомные стрелки
+    block.find('.slider-arrow--prev').on('click', function () {
+      slider.slick('slickPrev');
+      console.log('ll');
+    });
+    block.find('.slider-arrow--next').on('click', function () {
+      slider.slick('slickNext');
+    });
+  }
+}
+slider2($('.welcome__slider-container'));

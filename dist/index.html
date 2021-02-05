@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div class="page">
+		<div class="page wrapper">
 			<!-- header-->
 			<header class="header" id="header">
 				<!-- .header-top-->
@@ -33,60 +33,49 @@
 				<!--	/.header-top-->
 				<!-- header-center-->
 				<div class="header-center"><a class="header-center__logo" href="#"><img src="img/logo.svg" alt=""></a>
-					<div class="btn">Каталог</div>
+					<div class="header-center__btn btn"><img src="img/subject.svg" alt=""><span>Каталог</span></div>
 					<form class="header-center__search" action="">
 						<input class="header-center__input input" type="text" placeholder="Поиск по сайту, товарам и разделам" id="search">
 						<label class="header-center__zoom" for="search"><img src="img/zoom.svg" alt=""></label>
 					</form>
 					<div class="header-center__menu">
 						<ul class="header-center__list">
-							<li>Статус заказа</li>
-							<li>Войти</li>
-							<li>Сравнение</li>
-							<li>Ибранное</li>
-							<li>Корзина</li>
+							<li><img src="img/timer.svg" alt=""><span>Статус заказа</span></li>
+							<li><img src="img/account.svg" alt=""><span>Войти</span></li>
+							<li><img src="img/compare.svg" alt=""><span>Сравнение</span></li>
+							<li><img src="img/favorite.svg" alt=""><span>Ибранное</span></li>
+							<li><img src="img/cart.svg" alt=""><span>Корзина</span></li>
 						</ul>
 					</div>
+					<!-- catalog-drop-->
+					<!--	/catalog-drop-->
 				</div>
-				<!--	/header-center
-				//- // menu
-				//- //- .menu--left .menu--right
-				//- .js-menu.menu.menu--right
-				//- 	#menu-btn.menu__btn.hamburger.hamburger--squeeze
-				//- 		.hamburger-box
-				//- 			.hamburger-inner
-				//- 	nav.menu__nav
-				//- 		ul.menu__list
-				//- 			li
-				//- 				a(href="#") Меню 1
-				//- 			li
-				//- 				a(href="#") Меню 2
-				//- 			li
-				//- 				a(href="#") Меню 3
-				//- 			li
-				//- 				a(href="#") Меню 4
-				//- 			li
-				//- 				a(href="#") Меню 5
-				//- 			li
-				//- 				a(href="#") Меню 6
-				//- 			li
-				//- 				a(href="#") Меню 7
-				//- 			li
-				//- 				a(href="#") Меню 8
-				//- 		#menu-close.menu__close
-				//- 	#menu-over.menu__over
-				//- // /menu
-				
-				-->
+				<!--	/header-center-->
+				<!-- header-bottom-->
+				<nav class="header-bottom">
+					<ul class="header-bottom__list">
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Скидки</a></li>
+						<li><a href="#">Новинки</a></li>
+						<li><a href="#">Всё для маркировки</a></li>
+						<li><a href="#">Рассрочка</a></li>
+					</ul>
+					<ul class="header-bottom__list">
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Партнёрам</a></li>
+						<li><a href="#">Доставка и оплата</a></li>
+						<li><a href="#">Cервисный центр</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<!--	/header-bottom-->
 			</header>
 			<!-- /header-->
-			<div class="content">
-				<div class="wrapper">
-					<ul class="navPage">
-						<li><a href="home.html">Главная</a></li>
-					</ul>
-				</div>
-			</div>
+			<main class="content">
+				<ul class="navPage">
+					<li><a href="home.html">Главная</a></li>
+				</ul>
+			</main>
 			<!-- footer-->
 			<footer class="footer"> 
 				<div class="licence">Футер</div>

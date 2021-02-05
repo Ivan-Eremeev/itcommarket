@@ -1,0 +1,60 @@
+.welcome {
+  &__col {
+    &--1 {
+      @include col(12);
+    }
+    &--2 {
+      @include col(4);
+    }
+  }
+  &__slider-container {
+    height: 100%;
+    position: relative;
+    .slider-arrow {
+      &--prev {
+        left: -30px;
+      }
+      &--next {
+        right: -30px;
+      }
+    }
+    &:hover {
+      .slider-arrow {
+        opacity: 1;
+        &.slick-disabled {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &__slider {
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    &--card {
+      box-shadow: $shadow;
+    }
+    .banner {
+      border-radius: 0;
+    }
+    .card {
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .slick-list {
+      height: 100%;
+    }
+    .slick-track {
+      height: 100%;
+    }
+    .slick-slide {
+      height: 100%;
+      > div {
+        height: 100%;
+      }
+      .banner, .card {
+        height: 100%;
+      }
+    }
+  }
+}

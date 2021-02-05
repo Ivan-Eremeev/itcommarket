@@ -1,0 +1,27 @@
+.banner {
+  padding: 75px 80px;
+  border-radius: 24px;
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-color: $yellow;
+  &__content {
+    
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  &__subtext {
+    line-height: 22px;
+    margin-bottom: 28px;
+  }
+  .btn {
+    padding: 14px 40px 15px 40px;
+  }
+}

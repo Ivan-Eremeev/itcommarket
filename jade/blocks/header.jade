@@ -40,7 +40,10 @@ header.header#header
 		a(href="#").header-center__logo
 			img(src="img/logo.svg", alt="")
 
-		.btn Каталог
+		.header-center__btn.btn
+			img(src="img/subject.svg", alt="")
+			span Каталог
+			
 
 		form(action="").header-center__search
 			input(type="text" placeholder="Поиск по сайту, товарам и разделам")#search.header-center__input.input
@@ -49,39 +52,113 @@ header.header#header
 
 		.header-center__menu
 			ul.header-center__list
-				li Статус заказа
-				li Войти
-				li Сравнение
-				li Ибранное
-				li Корзина
+				li
+					img(src="img/timer.svg", alt="")
+					span Статус заказа
+				li
+					img(src="img/account.svg", alt="")
+					span Войти
+				li
+					img(src="img/compare.svg", alt="")
+					span Сравнение
+				li
+					img(src="img/favorite.svg", alt="")
+					span Ибранное
+				li
+					img(src="img/cart.svg", alt="")
+					span Корзина
+
+		// catalog-drop
+		//- .catalog-drop
+
+			.catalog-drop__img-block 
+				.catalog-drop__img
+					img(src="", alt="")
+				a(href="#").catalog-drop__btn Подробно о товаре
+
+			.catalog-drop__content 
+
+				.catalog-drop__col.catalog-drop__col--1
+
+					.catalog-drop__menu
+						.catalog-drop__title Каталог
+						ul.catalog-drop__list 
+							li Автономные кассы
+							li Фискальные регистраторы 
+							li Смарт-терминалы
+							li Смарт-терминалы со встроенным эквайрингом
+							li POS оборудование
+							li Сканеры ШК
+							li Принтеры ШК
+							li Весы
+							li Кассы для интернет магазина
+							li Решения для бизнеса
+							li Программное обеспечение
+							li Маркировка
+
+					.catalog-drop__menu
+						.catalog-drop__title Услуги
+						ul.catalog-drop__list
+							li Ввод ККТ в эксплуатацию
+							li Сопровождение Вашей ККТ
+							li Программное обновление ККТ
+							li Ремонт
+
+				.catalog-drop__col.catalog-drop__col--2
+				
+					.catalog-drop__menu
+						.catalog-drop__title Решения для Вашего бизнеса
+						ul.catalog-drop__list
+							li Для интернет магазина
+							li Для магазина розничной торговли (мелкая розница, магазины у дома)
+							li Для магазина розничной торговли (минимаркеты)
+							li Для кафе/ресторанов
+							li Для закусочной (фастфуд)
+							li Для бара
+							li Для салона красоты
+							li Для автосервиса 
+							li Для предоставления бытовых услуг
+
+					.catalog-drop__menu
+						.catalog-drop__title О компании
+						ul.catalog-drop__list
+							li О нас
+							li Контакты
+							li Экспертные статьи
+					
+					.catalog-drop__menu
+						.catalog-drop__title Партнерство
+						ul.catalog-drop__list
+							li Партнерство по кассовому оборудованию
+							li Партнерство по решениям для интернет магазинов
+		//	/catalog-drop
+		
 	//	/header-center
 
-		//- // menu
-		//- //- .menu--left .menu--right
-		//- .js-menu.menu.menu--right
-		//- 	#menu-btn.menu__btn.hamburger.hamburger--squeeze
-		//- 		.hamburger-box
-		//- 			.hamburger-inner
-		//- 	nav.menu__nav
-		//- 		ul.menu__list
-		//- 			li
-		//- 				a(href="#") Меню 1
-		//- 			li
-		//- 				a(href="#") Меню 2
-		//- 			li
-		//- 				a(href="#") Меню 3
-		//- 			li
-		//- 				a(href="#") Меню 4
-		//- 			li
-		//- 				a(href="#") Меню 5
-		//- 			li
-		//- 				a(href="#") Меню 6
-		//- 			li
-		//- 				a(href="#") Меню 7
-		//- 			li
-		//- 				a(href="#") Меню 8
-		//- 		#menu-close.menu__close
-		//- 	#menu-over.menu__over
-		//- // /menu
+	// header-bottom
+	nav.header-bottom
+		ul.header-bottom__list
+			li
+				a(href="#") Акции
+			li
+				a(href="#") Скидки
+			li
+				a(href="#") Новинки
+			li
+				a(href="#") Всё для маркировки
+			li
+				a(href="#") Рассрочка
+		ul.header-bottom__list
+			li
+				a(href="#") О компании
+			li
+				a(href="#") Партнёрам
+			li
+				a(href="#") Доставка и оплата
+			li
+				a(href="#") Cервисный центр
+			li
+				a(href="#") Контакты
+	//	/header-bottom
 
 // /header
