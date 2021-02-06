@@ -25,7 +25,13 @@
 						</ul>
 					</nav>
 					<ul class="header-top__list header-top__list--orange-hover">
-						<li class="header-top__city">Санкт-Петербург</li>
+						<li class="header-top__city js-drop-click" data-id="#dropCity">Санкт-Петербург
+							<ul class="header-top__drop" id="dropCity">
+								<li><a href="#">Москва</a></li>
+								<li><a href="#">Екатеринбург</a></li>
+								<li><a href="#">Новосибирск</a></li>
+							</ul>
+						</li>
 						<li><a href="#">Точки выдачи</a></li>
 						<li><a href="tel:88006004149">8 800 600 41 49</a></li>
 					</ul>
@@ -33,7 +39,7 @@
 				<!--	/.header-top-->
 				<!-- header-center-->
 				<div class="header-center"><a class="header-center__logo" href="#"><img src="img/logo.svg" alt=""></a>
-					<div class="header-center__btn btn"><img src="img/subject.svg" alt=""><span>Каталог</span></div>
+					<div class="header-center__btn btn js-drop-click" data-id="#catalog"><img src="img/subject.svg" alt=""><span>Каталог</span></div>
 					<form class="header-center__search" action="">
 						<input class="header-center__input input" type="text" placeholder="Поиск по сайту, товарам и разделам" id="search">
 						<label class="header-center__zoom" for="search"><img src="img/zoom.svg" alt=""></label>
@@ -48,6 +54,74 @@
 						</ul>
 					</div>
 					<!-- catalog-drop-->
+					<div class="catalog-drop" id="catalog">
+						<div class="catalog-drop__container">
+							<div class="catalog-drop__img-block"> 
+								<div class="catalog-drop__img"><img src="" alt=""></div><a class="catalog-drop__btn" href="#">Подробно о товаре</a>
+							</div>
+							<div class="catalog-drop__content"> 
+								<div class="catalog-drop__col catalog-drop__col--1">
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">Каталог</div>
+										<ul class="catalog-drop__list"> 
+											<li><a href="#">Автономные кассы</a></li>
+											<li><a href="#">Фискальные регистраторы </a></li>
+											<li><a href="#">Смарт-терминалы</a></li>
+											<li><a href="#">Смарт-терминалы со встроенным эквайрингом</a></li>
+											<li><a href="#">POS оборудование</a></li>
+											<li><a href="#">Сканеры ШК</a></li>
+											<li><a href="#">Принтеры ШК</a></li>
+											<li><a href="#">Весы</a></li>
+											<li><a href="#">Кассы для интернет магазина</a></li>
+											<li><a href="#">Решения для бизнеса</a></li>
+											<li><a href="#">Программное обеспечение</a></li>
+											<li><a href="#">Маркировка</a></li>
+										</ul>
+									</div>
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">Услуги</div>
+										<ul class="catalog-drop__list">
+											<li><a href="#">Ввод ККТ в эксплуатацию</a></li>
+											<li><a href="#">Сопровождение Вашей ККТ</a></li>
+											<li><a href="#">Программное обновление ККТ</a></li>
+											<li><a href="#">Ремонт</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="catalog-drop__col catalog-drop__col--2">
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">Решения для Вашего бизнеса</div>
+										<ul class="catalog-drop__list">
+											<li><a href="#">Для интернет магазина</a></li>
+											<li><a href="#">Для магазина розничной торговли (мелкая розница, магазины у дома)</a></li>
+											<li><a href="#">Для магазина розничной торговли (минимаркеты)</a></li>
+											<li><a href="#">Для кафе/ресторанов</a></li>
+											<li><a href="#">Для закусочной (фастфуд)</a></li>
+											<li><a href="#">Для бара</a></li>
+											<li><a href="#">Для салона красоты</a></li>
+											<li><a href="#">Для автосервиса </a></li>
+											<li><a href="#">Для предоставления бытовых услуг</a></li>
+										</ul>
+									</div>
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">О компании</div>
+										<ul class="catalog-drop__list">
+											<li><a href="#">О нас</a></li>
+											<li><a href="#">Контакты</a></li>
+											<li><a href="#">Экспертные статьи</a></li>
+										</ul>
+									</div>
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">Партнерство</div>
+										<ul class="catalog-drop__list">
+											<li><a href="#">Партнерство по кассовому оборудованию</a></li>
+											<li><a href="#">Партнерство по решениям для интернет магазинов</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<!--	/catalog-drop-->
 				</div>
 				<!--	/header-center-->

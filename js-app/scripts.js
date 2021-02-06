@@ -119,29 +119,45 @@ $(document).ready(function () {
 	// };
 	// fontResize();
 
-	// // Табы
-	// function tabs(tabs) {
-	// 	if (tabs.length) {
-	// 		tabs.each(function() {
-	// 			var trigger = $(this).find('#tabs_triggers').children(),
-	// 					content = $(this).find('#tabs_content').children(),
-	// 					time = 300;
-	// 			trigger.click(function () {
-	// 				var $this = $(this),
-	// 						index = $this.index();
-	// 				if (!$this.hasClass('active')) {
-	// 					trigger.removeClass('active');
-	// 					$this.addClass('active');
-	// 					content.hide();
-	// 					content.eq(index).fadeIn(time);
-	// 				}else {
-	// 					return false;
-	// 				}
-	// 			});
-	// 		});
-	// 	}
-	// }
-	// tabs($('.js_tabs'));
+	// Табы
+	function tabs(tabs) {
+		if (tabs.length) {
+			tabs.each(function() {
+				var trigger = $(this).find('#tabs_triggers').children(),
+						content = $(this).find('#tabs_content').children(),
+						time = 300;
+				trigger.click(function () {
+					var $this = $(this),
+							index = $this.index();
+					if (!$this.hasClass('active')) {
+						trigger.removeClass('active');
+						$this.addClass('active');
+						content.hide().removeClass('open');
+						content.eq(index).fadeIn(time).addClass('open');
+						tabs.find('.slick-slider').slick('setPosition');
+					}else {
+						return false;
+					}
+				});
+			});
+		}
+	}
+	tabs($('.js_tabs'));
+
+	// Выпадайка при клике
+	function dropClick(btn) {
+		if (btn.length) {
+			btn.each(function () {
+				var $this = $(this),
+						id = $this.data('id'),
+						dropBlock = $(id);
+				$this.on('click', function () {
+					dropBlock.toggleClass('open');
+				});
+			});
+		}
+	}
+	dropClick($('.js-drop-click'));
 
 	// // Аккордеон
 	// function accordeon(accordeon, mobile) {

@@ -1,5 +1,4 @@
 .catalog-drop {
-  display: flex;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 20px 40px rgba(0,0,0,.2);
@@ -8,17 +7,39 @@
   position: absolute;
   top: 100%;
   left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 3;
+  transform: translate(0, 100px);
+  &.open {
+    opacity: 1;
+    transform: translate(0,0);
+    visibility: visible;
+  }
+  &__container {
+    display: flex;
+  }
   &__img-block {
     width: 31.5%;
     position: relative;
+    &:hover {
+      .catalog-drop__img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
   &__img {
     height: 100%;
     background-color: $yellow;
+    overflow: hidden;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: 0.5s;
     }
   }
   &__btn {
@@ -56,10 +77,17 @@
     font-size: 20px;
     color: $gray;
     margin-bottom: 10px;
+    user-select: none;
   }
   &__list {
     li {
       margin-bottom: 5px;
+    }
+    a {
+      color: $black;
+      &:hover {
+        color: $orange;
+      }
     }
   }
 }

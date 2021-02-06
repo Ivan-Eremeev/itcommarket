@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 7px 24px 9px 24px;
+  padding: 0 24px;
   background-color: $black;
   border-radius: 0 0 12px 12px;
   &__menu {
@@ -15,7 +15,8 @@
     margin-right: -12px;
     white-space: nowrap;
     li {
-      margin: 3px 12px;
+      padding: 10px 0 12px;
+      margin: 0 12px;
       color: #fff;
     }
     a {
@@ -43,9 +44,10 @@
   }
   &__city {
     position: relative;
-    padding: 0 25px;
+    padding: 10px 25px 12px !important;
     cursor: pointer;
     transition: $trans;
+    user-select: none;
     &:hover, &.active {
       color: $orange;
     }
@@ -58,7 +60,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
-      top: 1px;
+      top: 10px;
       left: 5px;
     }
     &:after {
@@ -70,24 +72,34 @@
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
-      top: 6px;
+      top: 16px;
       right: 5px;
     }
   }
-  // &__drop {
-  //   width: 100%;
-  //   padding: 10px 5px 10px 25px;
-  //   background-color: #333;
-  //   border-radius: 10px;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 100%;
-  //   li {
-  //     margin: 2px 0;
-  //   }
-  //   a {
-  //     display: block;
-  //     padding: 5px 0;
-  //   }
-  // }
+  &__drop {
+    min-width: 100%;
+    padding: 10px 25px;
+    background-color: #333;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 3;
+    transform: translate(0, 50px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,0);
+    }
+    li {
+      margin: 2px 0;
+    }
+    a {
+      display: block;
+      padding: 5px 0;
+    }
+  }
 }

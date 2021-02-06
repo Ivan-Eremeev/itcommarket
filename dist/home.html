@@ -26,7 +26,13 @@
 						</ul>
 					</nav>
 					<ul class="header-top__list header-top__list--orange-hover">
-						<li class="header-top__city">Санкт-Петербург</li>
+						<li class="header-top__city js-drop-click" data-id="#dropCity">Санкт-Петербург
+							<ul class="header-top__drop" id="dropCity">
+								<li><a href="#">Москва</a></li>
+								<li><a href="#">Екатеринбург</a></li>
+								<li><a href="#">Новосибирск</a></li>
+							</ul>
+						</li>
 						<li><a href="#">Точки выдачи</a></li>
 						<li><a href="tel:88006004149">8 800 600 41 49</a></li>
 					</ul>
@@ -34,7 +40,7 @@
 				<!--	/.header-top-->
 				<!-- header-center-->
 				<div class="header-center"><a class="header-center__logo" href="#"><img src="img/logo.svg" alt=""></a>
-					<div class="header-center__btn btn"><img src="img/subject.svg" alt=""><span>Каталог</span></div>
+					<div class="header-center__btn btn js-drop-click" data-id="#catalog"><img src="img/subject.svg" alt=""><span>Каталог</span></div>
 					<form class="header-center__search" action="">
 						<input class="header-center__input input" type="text" placeholder="Поиск по сайту, товарам и разделам" id="search">
 						<label class="header-center__zoom" for="search"><img src="img/zoom.svg" alt=""></label>
@@ -49,6 +55,74 @@
 						</ul>
 					</div>
 					<!-- catalog-drop-->
+					<div class="catalog-drop" id="catalog">
+						<div class="catalog-drop__container">
+							<div class="catalog-drop__img-block"> 
+								<div class="catalog-drop__img"><img src="" alt=""></div><a class="catalog-drop__btn" href="#">Подробно о товаре</a>
+							</div>
+							<div class="catalog-drop__content"> 
+								<div class="catalog-drop__col catalog-drop__col--1">
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">Каталог</div>
+										<ul class="catalog-drop__list"> 
+											<li><a href="#">Автономные кассы</a></li>
+											<li><a href="#">Фискальные регистраторы </a></li>
+											<li><a href="#">Смарт-терминалы</a></li>
+											<li><a href="#">Смарт-терминалы со встроенным эквайрингом</a></li>
+											<li><a href="#">POS оборудование</a></li>
+											<li><a href="#">Сканеры ШК</a></li>
+											<li><a href="#">Принтеры ШК</a></li>
+											<li><a href="#">Весы</a></li>
+											<li><a href="#">Кассы для интернет магазина</a></li>
+											<li><a href="#">Решения для бизнеса</a></li>
+											<li><a href="#">Программное обеспечение</a></li>
+											<li><a href="#">Маркировка</a></li>
+										</ul>
+									</div>
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">Услуги</div>
+										<ul class="catalog-drop__list">
+											<li><a href="#">Ввод ККТ в эксплуатацию</a></li>
+											<li><a href="#">Сопровождение Вашей ККТ</a></li>
+											<li><a href="#">Программное обновление ККТ</a></li>
+											<li><a href="#">Ремонт</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="catalog-drop__col catalog-drop__col--2">
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">Решения для Вашего бизнеса</div>
+										<ul class="catalog-drop__list">
+											<li><a href="#">Для интернет магазина</a></li>
+											<li><a href="#">Для магазина розничной торговли (мелкая розница, магазины у дома)</a></li>
+											<li><a href="#">Для магазина розничной торговли (минимаркеты)</a></li>
+											<li><a href="#">Для кафе/ресторанов</a></li>
+											<li><a href="#">Для закусочной (фастфуд)</a></li>
+											<li><a href="#">Для бара</a></li>
+											<li><a href="#">Для салона красоты</a></li>
+											<li><a href="#">Для автосервиса </a></li>
+											<li><a href="#">Для предоставления бытовых услуг</a></li>
+										</ul>
+									</div>
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">О компании</div>
+										<ul class="catalog-drop__list">
+											<li><a href="#">О нас</a></li>
+											<li><a href="#">Контакты</a></li>
+											<li><a href="#">Экспертные статьи</a></li>
+										</ul>
+									</div>
+									<div class="catalog-drop__menu">
+										<div class="catalog-drop__title">Партнерство</div>
+										<ul class="catalog-drop__list">
+											<li><a href="#">Партнерство по кассовому оборудованию</a></li>
+											<li><a href="#">Партнерство по решениям для интернет магазинов</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<!--	/catalog-drop-->
 				</div>
 				<!--	/header-center-->
@@ -121,7 +195,7 @@
 						</div>
 						<div class="welcome__col welcome__col--2">
 							<div class="welcome__slider-container">
-								<div class="welcome__slider welcome__slider--card js-slider">
+								<div class="welcome__slider welcome__slider--card js-slider-1">
 									<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
 									<!--	/card-->
 									<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
@@ -129,8 +203,6 @@
 									<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
 									<!--	/card-->
 								</div>
-								<div class="slider-arrow slider-arrow--prev"><img src="img/arrow.svg"></div>
-								<div class="slider-arrow slider-arrow--next"><img src="img/arrow.svg"></div>
 							</div>
 						</div>
 					</div>
@@ -141,19 +213,19 @@
 					<div class="title title--center">Актуальные акции</div>
 					<div class="row"> 
 						<div class="sales__col">
-							<!-- item--><a class="item" href="#"><span class="item__img img-responsive"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">При покупке кассы в ITCOM Market</span><span class="item__title">Электронная подпись со скидкой 30%</span></span></a>
+							<!-- item--><a class="item" href="#"><span class="item__img"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">При покупке кассы в ITCOM Market</span><span class="item__title">Электронная подпись со скидкой 30%</span></span></a>
 							<!--	/item-->
 						</div>
 						<div class="sales__col">
-							<!-- item--><a class="item" href="#"><span class="item__img img-responsive"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">При заказе от 10 000 руб</span><span class="item__title">Бесплатная доставка</span></span></a>
+							<!-- item--><a class="item" href="#"><span class="item__img"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">При заказе от 10 000 руб</span><span class="item__title">Бесплатная доставка</span></span></a>
 							<!--	/item-->
 						</div>
 						<div class="sales__col">
-							<!-- item--><a class="item" href="#"><span class="item__img img-responsive"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Хотите узнать больше, как</span><span class="item__title">Купить в рассрочку онлайн-кассу</span></span></a>
+							<!-- item--><a class="item" href="#"><span class="item__img"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Хотите узнать больше, как</span><span class="item__title">Купить в рассрочку онлайн-кассу</span></span></a>
 							<!--	/item-->
 						</div>
 						<div class="sales__col">
-							<!-- item--><a class="item" href="#"><span class="item__img img-responsive"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">При заказе от 5-ти касс Эвотор</span><span class="item__title">Установка и настройка кассы в подарок</span></span></a>
+							<!-- item--><a class="item" href="#"><span class="item__img"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">При заказе от 5-ти касс Эвотор</span><span class="item__title">Установка и настройка кассы в подарок</span></span></a>
 							<!--	/item-->
 						</div>
 					</div>
@@ -207,19 +279,19 @@
 					</div>
 					<div class="row"> 
 						<div class="services__col">
-							<!-- item--><a class="item" href="#"><span class="item__img img-responsive"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Услуга</span><span class="item__title">Ввод ККТ в эксплуатацию</span></span></a>
+							<!-- item--><a class="item" href="#"><span class="item__img"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Услуга</span><span class="item__title">Ввод ККТ в эксплуатацию</span></span></a>
 							<!--	/item-->
 						</div>
 						<div class="services__col">
-							<!-- item--><a class="item" href="#"><span class="item__img img-responsive"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Услуга</span><span class="item__title">Сопровождение вашей ККТ</span></span></a>
+							<!-- item--><a class="item" href="#"><span class="item__img"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Услуга</span><span class="item__title">Сопровождение вашей ККТ</span></span></a>
 							<!--	/item-->
 						</div>
 						<div class="services__col">
-							<!-- item--><a class="item" href="#"><span class="item__img img-responsive"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Услуга</span><span class="item__title">Программное обновление ККТ</span></span></a>
+							<!-- item--><a class="item" href="#"><span class="item__img"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Услуга</span><span class="item__title">Программное обновление ККТ</span></span></a>
 							<!--	/item-->
 						</div>
 						<div class="services__col">
-							<!-- item--><a class="item" href="#"><span class="item__img img-responsive"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Услуга</span><span class="item__title">Ремонт ККТ</span></span></a>
+							<!-- item--><a class="item" href="#"><span class="item__img"><img src="" alt=""/></span><span class="item__content"> <span class="item__text">Услуга</span><span class="item__title">Ремонт ККТ</span></span></a>
 							<!--	/item-->
 						</div>
 					</div>
@@ -246,12 +318,254 @@
 							<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
 							<!--	/card-->
 						</div>
-						<div class="slider-arrow slider-arrow--prev"><img src="img/arrow.svg"></div>
-						<div class="slider-arrow slider-arrow--next"><img src="img/arrow.svg"></div>
 					</div>
 					<!--	/slider-cards-->
 				</div>
 				<!--	/popular-->
+				<!-- brands-->
+				<div class="brands">
+					<div class="title title--center">Товары популярных брендов</div>
+					<div class="brands__row"> 
+						<div class="brands__col">
+							<!-- brand--><a class="brand" href="#">
+								<div class="brand__img"> <img src="img/brand_1.png" alt=""/></div></a>
+							<!--	/brand-->
+						</div>
+						<div class="brands__col">
+							<!-- brand--><a class="brand" href="#">
+								<div class="brand__img"> <img src="img/brand_2.png" alt=""/></div></a>
+							<!--	/brand-->
+						</div>
+						<div class="brands__col">
+							<!-- brand--><a class="brand" href="#">
+								<div class="brand__img"> <img src="img/brand_3.png" alt=""/></div></a>
+							<!--	/brand-->
+						</div>
+						<div class="brands__col">
+							<!-- brand--><a class="brand" href="#">
+								<div class="brand__img"> <img src="img/brand_4.png" alt=""/></div></a>
+							<!--	/brand-->
+						</div>
+						<div class="brands__col">
+							<!-- brand--><a class="brand" href="#">
+								<div class="brand__img"> <img src="img/brand_5.png" alt=""/></div></a>
+							<!--	/brand-->
+						</div>
+					</div>
+				</div>
+				<!--	/brands-->
+				<!-- popular-->
+				<div class="popular popular--mb">
+					<div class="title-flex">
+						<div class="title">Мы рекомендуем</div><a class="more-btn" href="#">Перейти в каталог</a>
+					</div>
+					<!-- tabs-->
+					<div class="tabs js_tabs">
+						<ul class="tabs__triggers" id="tabs_triggers">
+							<li class="active stock">Акция</li>
+							<li class="sale">Скидка</li>
+							<li class="new">Новинка</li>
+							<li class="mark">Для маркировки</li>
+							<li class="credit">Рассрочка</li>
+						</ul>
+						<div class="tabs__content" id="tabs_content">
+							<div class="open">
+								<!-- slider-cards-->
+								<div class="slider-cards">
+									<div class="js-slider">
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+									</div>
+								</div>
+								<!--	/slider-cards-->
+							</div>
+							<div>
+								<!-- slider-cards-->
+								<div class="slider-cards">
+									<div class="js-slider">
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+									</div>
+								</div>
+								<!--	/slider-cards-->
+							</div>
+							<div>
+								<!-- slider-cards-->
+								<div class="slider-cards">
+									<div class="js-slider">
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+									</div>
+								</div>
+								<!--	/slider-cards-->
+							</div>
+							<div>
+								<!-- slider-cards-->
+								<div class="slider-cards">
+									<div class="js-slider">
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+									</div>
+								</div>
+								<!--	/slider-cards-->
+							</div>
+							<div>
+								<!-- slider-cards-->
+								<div class="slider-cards">
+									<div class="js-slider">
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+										<!-- card--><a class="card" href="#"><span class="card__img img-responsive"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300 <span>₽</span></span></span></span></a>
+										<!--	/card-->
+									</div>
+								</div>
+								<!--	/slider-cards-->
+							</div>
+						</div>
+					</div>
+					<!--	/tabs-->
+				</div>
+				<!--	/popular-->
+				<!-- feedback-->
+				<div class="feedback">
+					<div class="feedback__title">Подбор кассы по параметрам</div>
+					<div class="feedback__text">Подбор онлайн-кассы от ITCOM Market среди 3000 моделей специально для вас</div>
+					<form class="feedback__form" action="#">
+						<div class="feedback__select input">Вид деятельности
+							<div class="feedback__drop"> 
+								<ul class="feedback__list">
+									<li>
+										<input type="checkbox" id="business_0">
+										<label class="feedback__checkbox" for="business_0"></label>
+										<label class="feedback__label-text" for="business_0">Аптека</label>
+									</li>
+									<li>
+										<input type="checkbox" id="business_1">
+										<label class="feedback__checkbox" for="business_1"></label>
+										<label class="feedback__label-text" for="business_1">Кафе/бар/ресторан</label>
+									</li>
+									<li>
+										<input type="checkbox" id="business_2">
+										<label class="feedback__checkbox" for="business_2"></label>
+										<label class="feedback__label-text" for="business_2">Курьерские услуги</label>
+									</li>
+									<li>
+										<input type="checkbox" id="business_3">
+										<label class="feedback__checkbox" for="business_3"></label>
+										<label class="feedback__label-text" for="business_3">Магазин у дома</label>
+									</li>
+									<li>
+										<input type="checkbox" id="business_4">
+										<label class="feedback__checkbox" for="business_4"></label>
+										<label class="feedback__label-text" for="business_4">Салоны красоты/медцентры</label>
+									</li>
+									<li>
+										<input type="checkbox" id="business_5">
+										<label class="feedback__checkbox" for="business_5"></label>
+										<label class="feedback__label-text" for="business_5">Транспорт</label>
+									</li>
+									<li>
+										<input type="checkbox" id="business_6">
+										<label class="feedback__checkbox" for="business_6"></label>
+										<label class="feedback__label-text" for="business_6">Услуги</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="feedback__select input">Характер работы
+							<div class="feedback__drop"> 
+								<ul class="feedback__list">
+									<li>
+										<input type="checkbox" id="character_0">
+										<label class="feedback__checkbox" for="character_0"></label>
+										<label class="feedback__label-text" for="character_0">Разъездной</label>
+									</li>
+									<li>
+										<input type="checkbox" id="character_1">
+										<label class="feedback__checkbox" for="character_1"></label>
+										<label class="feedback__label-text" for="character_1">Смешанный</label>
+									</li>
+									<li>
+										<input type="checkbox" id="character_2">
+										<label class="feedback__checkbox" for="character_2"></label>
+										<label class="feedback__label-text" for="character_2">Стационарный</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="feedback__select input">Ценовой сегмент
+							<div class="feedback__drop"> 
+								<ul class="feedback__list">
+									<li>
+										<input type="checkbox" id="segment_0">
+										<label class="feedback__checkbox" for="segment_0"></label>
+										<label class="feedback__label-text" for="segment_0">Высокий</label>
+									</li>
+									<li>
+										<input type="checkbox" id="segment_1">
+										<label class="feedback__checkbox" for="segment_1"></label>
+										<label class="feedback__label-text" for="segment_1">Низкий</label>
+									</li>
+									<li>
+										<input type="checkbox" id="segment_2">
+										<label class="feedback__checkbox" for="segment_2"></label>
+										<label class="feedback__label-text" for="segment_2">Средний</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<button class="btn" type="submit">Подобрать кассу</button>
+					</form>
+				</div>
+				<!--	/feedback-->
 			</main>
 			<!-- footer-->
 			<footer class="footer"> </footer>

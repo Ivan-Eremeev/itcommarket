@@ -10,8 +10,11 @@
   &__img {
     background-color: $yellow;
     transition: 0.5s;
-    &:before {
-      padding-top: 100%;
+    img {
+      display: block;
+      width: 100%;
+      min-height: 304px;
+      object-fit: cover;
     }
   }
   &__content {  

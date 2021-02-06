@@ -17,6 +17,7 @@ block style-libs
 include blocks/card.jade
 include blocks/item.jade
 include blocks/icon.jade
+include blocks/brand.jade
 
 block content
 
@@ -65,14 +66,10 @@ block content
 
 					.welcome__col.welcome__col--2
 						.welcome__slider-container
-							.welcome__slider.welcome__slider--card.js-slider
+							.welcome__slider.welcome__slider--card.js-slider-1
 								+card
 								+card
 								+card
-							.slider-arrow.slider-arrow--prev
-								img(src="img/arrow.svg")
-							.slider-arrow.slider-arrow--next
-								img(src="img/arrow.svg")
 			//	welcome
 
 			// sales
@@ -144,12 +141,180 @@ block content
 						+card
 						+card
 						+card
-					.slider-arrow.slider-arrow--prev
-						img(src="img/arrow.svg")
-					.slider-arrow.slider-arrow--next
-						img(src="img/arrow.svg")
 				//	/slider-cards
 			//	/popular
+
+			// brands
+			.brands
+				.title.title--center Товары популярных брендов
+				.brands__row 
+					.brands__col
+						+brand('img/brand_1.png')
+					.brands__col
+						+brand('img/brand_2.png')
+					.brands__col
+						+brand('img/brand_3.png')
+					.brands__col
+						+brand('img/brand_4.png')
+					.brands__col
+						+brand('img/brand_5.png')
+			//	/brands
+
+			// popular
+			.popular.popular--mb
+				.title-flex
+					.title Мы рекомендуем
+					a(href="#").more-btn Перейти в каталог
+				
+				// tabs
+				.tabs.js_tabs
+					ul#tabs_triggers.tabs__triggers
+						li.active.stock Акция
+						li.sale Скидка
+						li.new Новинка
+						li.mark Для маркировки
+						li.credit Рассрочка
+					#tabs_content.tabs__content
+
+						div.open
+							// slider-cards
+							.slider-cards
+
+								.js-slider
+									+card
+									+card
+									+card
+									+card
+									+card
+									+card
+							//	/slider-cards
+
+						div
+							// slider-cards
+							.slider-cards
+
+								.js-slider
+									+card
+									+card
+									+card
+									+card
+									+card
+									+card
+							//	/slider-cards
+
+						div
+							// slider-cards
+							.slider-cards
+
+								.js-slider
+									+card
+									+card
+									+card
+									+card
+									+card
+									+card
+							//	/slider-cards
+
+						div
+							// slider-cards
+							.slider-cards
+
+								.js-slider
+									+card
+									+card
+									+card
+									+card
+									+card
+									+card
+							//	/slider-cards
+
+						div
+							// slider-cards
+							.slider-cards
+
+								.js-slider
+									+card
+									+card
+									+card
+									+card
+									+card
+									+card
+							//	/slider-cards
+				//	/tabs
+			//	/popular
+
+			// feedback
+			.feedback
+				.feedback__title Подбор кассы по параметрам
+				.feedback__text Подбор онлайн-кассы от ITCOM Market среди 3000 моделей специально для вас
+				form(action="#").feedback__form
+
+					.feedback__select.input Вид деятельности
+						.feedback__drop 
+							ul.feedback__list
+								li
+									input(type="checkbox")#business_0
+									label(for="business_0").feedback__checkbox
+									label(for="business_0").feedback__label-text Аптека
+								li
+									input(type="checkbox")#business_1
+									label(for="business_1").feedback__checkbox
+									label(for="business_1").feedback__label-text Кафе/бар/ресторан
+								li
+									input(type="checkbox")#business_2
+									label(for="business_2").feedback__checkbox
+									label(for="business_2").feedback__label-text Курьерские услуги
+								li
+									input(type="checkbox")#business_3
+									label(for="business_3").feedback__checkbox
+									label(for="business_3").feedback__label-text Магазин у дома
+								li
+									input(type="checkbox")#business_4
+									label(for="business_4").feedback__checkbox
+									label(for="business_4").feedback__label-text Салоны красоты/медцентры
+								li
+									input(type="checkbox")#business_5
+									label(for="business_5").feedback__checkbox
+									label(for="business_5").feedback__label-text Транспорт
+								li
+									input(type="checkbox")#business_6
+									label(for="business_6").feedback__checkbox
+									label(for="business_6").feedback__label-text Услуги
+
+					.feedback__select.input Характер работы
+						.feedback__drop 
+							ul.feedback__list
+								li
+									input(type="checkbox")#character_0
+									label(for="character_0").feedback__checkbox
+									label(for="character_0").feedback__label-text Разъездной
+								li
+									input(type="checkbox")#character_1
+									label(for="character_1").feedback__checkbox
+									label(for="character_1").feedback__label-text Смешанный
+								li
+									input(type="checkbox")#character_2
+									label(for="character_2").feedback__checkbox
+									label(for="character_2").feedback__label-text Стационарный
+
+					.feedback__select.input Ценовой сегмент
+						.feedback__drop 
+							ul.feedback__list
+								li
+									input(type="checkbox")#segment_0
+									label(for="segment_0").feedback__checkbox
+									label(for="segment_0").feedback__label-text Высокий
+								li
+									input(type="checkbox")#segment_1
+									label(for="segment_1").feedback__checkbox
+									label(for="segment_1").feedback__label-text Низкий
+								li
+									input(type="checkbox")#segment_2
+									label(for="segment_2").feedback__checkbox
+									label(for="segment_2").feedback__label-text Средний
+
+					button(type="submit").btn Подобрать кассу
+			//	/feedback
 			
 		include blocks/footer.jade
 

@@ -20,14 +20,14 @@ header.header#header
 					a(href="#") CLOUD
 
 		ul.header-top__list.header-top__list--orange-hover
-			li.header-top__city Санкт-Петербург
-				//- ul.header-top__drop
-				//- 	li
-				//- 		a(href="#") Москва
-				//- 	li
-				//- 		a(href="#") Екатеринбург
-				//- 	li
-				//- 		a(href="#") Новосибирск
+			li.header-top__city.js-drop-click(data-id="#dropCity") Санкт-Петербург
+				ul.header-top__drop#dropCity
+					li
+						a(href="#") Москва
+					li
+						a(href="#") Екатеринбург
+					li
+						a(href="#") Новосибирск
 			li
 				a(href="#") Точки выдачи
 			li
@@ -40,7 +40,7 @@ header.header#header
 		a(href="#").header-center__logo
 			img(src="img/logo.svg", alt="")
 
-		.header-center__btn.btn
+		.header-center__btn.btn.js-drop-click(data-id="#catalog")
 			img(src="img/subject.svg", alt="")
 			span Каталог
 			
@@ -69,68 +69,98 @@ header.header#header
 					span Корзина
 
 		// catalog-drop
-		//- .catalog-drop
+		.catalog-drop#catalog
+			.catalog-drop__container
+				.catalog-drop__img-block 
+					.catalog-drop__img
+						img(src="", alt="")
+					a(href="#").catalog-drop__btn Подробно о товаре
 
-			.catalog-drop__img-block 
-				.catalog-drop__img
-					img(src="", alt="")
-				a(href="#").catalog-drop__btn Подробно о товаре
+				.catalog-drop__content 
 
-			.catalog-drop__content 
+					.catalog-drop__col.catalog-drop__col--1
 
-				.catalog-drop__col.catalog-drop__col--1
+						.catalog-drop__menu
+							.catalog-drop__title Каталог
+							ul.catalog-drop__list 
+								li
+									a(href="#") Автономные кассы
+								li
+									a(href="#") Фискальные регистраторы 
+								li
+									a(href="#") Смарт-терминалы
+								li
+									a(href="#") Смарт-терминалы со встроенным эквайрингом
+								li
+									a(href="#") POS оборудование
+								li
+									a(href="#") Сканеры ШК
+								li
+									a(href="#") Принтеры ШК
+								li
+									a(href="#") Весы
+								li
+									a(href="#") Кассы для интернет магазина
+								li
+									a(href="#") Решения для бизнеса
+								li
+									a(href="#") Программное обеспечение
+								li
+									a(href="#") Маркировка
 
-					.catalog-drop__menu
-						.catalog-drop__title Каталог
-						ul.catalog-drop__list 
-							li Автономные кассы
-							li Фискальные регистраторы 
-							li Смарт-терминалы
-							li Смарт-терминалы со встроенным эквайрингом
-							li POS оборудование
-							li Сканеры ШК
-							li Принтеры ШК
-							li Весы
-							li Кассы для интернет магазина
-							li Решения для бизнеса
-							li Программное обеспечение
-							li Маркировка
+						.catalog-drop__menu
+							.catalog-drop__title Услуги
+							ul.catalog-drop__list
+								li
+									a(href="#") Ввод ККТ в эксплуатацию
+								li
+									a(href="#") Сопровождение Вашей ККТ
+								li
+									a(href="#") Программное обновление ККТ
+								li
+									a(href="#") Ремонт
 
-					.catalog-drop__menu
-						.catalog-drop__title Услуги
-						ul.catalog-drop__list
-							li Ввод ККТ в эксплуатацию
-							li Сопровождение Вашей ККТ
-							li Программное обновление ККТ
-							li Ремонт
-
-				.catalog-drop__col.catalog-drop__col--2
-				
-					.catalog-drop__menu
-						.catalog-drop__title Решения для Вашего бизнеса
-						ul.catalog-drop__list
-							li Для интернет магазина
-							li Для магазина розничной торговли (мелкая розница, магазины у дома)
-							li Для магазина розничной торговли (минимаркеты)
-							li Для кафе/ресторанов
-							li Для закусочной (фастфуд)
-							li Для бара
-							li Для салона красоты
-							li Для автосервиса 
-							li Для предоставления бытовых услуг
-
-					.catalog-drop__menu
-						.catalog-drop__title О компании
-						ul.catalog-drop__list
-							li О нас
-							li Контакты
-							li Экспертные статьи
+					.catalog-drop__col.catalog-drop__col--2
 					
-					.catalog-drop__menu
-						.catalog-drop__title Партнерство
-						ul.catalog-drop__list
-							li Партнерство по кассовому оборудованию
-							li Партнерство по решениям для интернет магазинов
+						.catalog-drop__menu
+							.catalog-drop__title Решения для Вашего бизнеса
+							ul.catalog-drop__list
+								li
+									a(href="#") Для интернет магазина
+								li
+									a(href="#") Для магазина розничной торговли (мелкая розница, магазины у дома)
+								li
+									a(href="#") Для магазина розничной торговли (минимаркеты)
+								li
+									a(href="#") Для кафе/ресторанов
+								li
+									a(href="#") Для закусочной (фастфуд)
+								li
+									a(href="#") Для бара
+								li
+									a(href="#") Для салона красоты
+								li
+									a(href="#") Для автосервиса 
+								li
+									a(href="#") Для предоставления бытовых услуг
+
+						.catalog-drop__menu
+							.catalog-drop__title О компании
+							ul.catalog-drop__list
+								li
+									a(href="#") О нас
+								li
+									a(href="#") Контакты
+								li
+									a(href="#") Экспертные статьи
+						
+						.catalog-drop__menu
+							.catalog-drop__title Партнерство
+							ul.catalog-drop__list
+								li
+									a(href="#") Партнерство по кассовому оборудованию
+								li
+									a(href="#") Партнерство по решениям для интернет магазинов
 		//	/catalog-drop
 		
 	//	/header-center

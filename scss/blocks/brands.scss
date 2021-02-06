@@ -1,0 +1,16 @@
+.brands {
+  margin-bottom: 45px;
+  .title {
+    margin-bottom: 60px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+  }
+  &__col {
+    flex-grow: 1;
+    padding-left: 16px;
+    margin-bottom: 16px;
+  }
+}

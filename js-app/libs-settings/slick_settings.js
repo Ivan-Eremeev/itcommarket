@@ -45,6 +45,14 @@ function slider(slider,sliderFor) {
       fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
       asNavFor: slider // Связь со слайдерами
     });
+
+    // Кастомные стрелки
+    slider.find('.slider-arrow--prev').on('click', function () {
+      slider.slick('slickPrev');
+    });
+    slider.find('.slider-arrow--next').on('click', function () {
+      slider.slick('slickNext');
+    });
   }
 }
 // slider();
@@ -67,48 +75,22 @@ function slider1(slider) {
 }
 slider1($('.js-slider-1'));
 
-// Слайдер с одним слайдом и кастомными стрелками
-function slider2(block) {
-  var slider = block.find('.js-slider');
-  if (slider.length) {
-    slider.slick({
-      swipe: true,
-      draggable: true,
-      arrows: false,
-      infinite: false,
-    });
-    // Кастомные стрелки
-    block.find('.slider-arrow--prev').on('click', function () {
-      slider.slick('slickPrev');
-      console.log('ll');
-    });
-    block.find('.slider-arrow--next').on('click', function () {
-      slider.slick('slickNext');
-    });
-  }
-}
-slider2($('.welcome__slider-container'));
-
 // Слайдер с 4 слайдами
-function slider3(block) {
-  var slider = block.find('.js-slider');
-  if (slider.length) {
-    slider.slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      swipe: true,
-      draggable: true,
-      arrows: false,
-      infinite: false,
-    });
-    // Кастомные стрелки
-    block.find('.slider-arrow--prev').on('click', function () {
-      slider.slick('slickPrev');
-      console.log('ll');
-    });
-    block.find('.slider-arrow--next').on('click', function () {
-      slider.slick('slickNext');
+function slider2(block) {
+  if (block.length) {
+    block.each(function () {
+      var $this = $(this),
+          slider = $this.find('.js-slider');
+      slider.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        swipe: true,
+        draggable: true,
+        infinite: false,
+        prevArrow: '<div class="slider-arrow slider-arrow--prev"><img src="img/arrow.svg"></div>',
+        nextArrow: '<div class="slider-arrow slider-arrow--next"><img src="img/arrow.svg"></div>',
+      });
     });
   }
 }
-slider3($('.slider-cards'));
+slider2($('.slider-cards'));

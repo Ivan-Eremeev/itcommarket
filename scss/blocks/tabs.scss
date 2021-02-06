@@ -1,17 +1,54 @@
-#tabs_triggers {
-  > * {
-    user-select: none;
-    cursor: pointer;
-    &.active {
-      border-bottom: 1px solid #000;
+.tabs {
+  &__triggers {
+    display: flex;
+    margin-left: -8px;
+    margin-bottom: 24px;
+    li {
+      padding: 6px 24px 7px;
+      margin-left: 8px;
+      border-radius: 24px;
+      background-color: $gray;
+      color: #fff;
+      user-select: none;
+      cursor: pointer;
+      transition: $trans;
+      &:hover, &.active {
+        &.stock {
+          background-color: #FE7200;
+        }
+        &.sale {
+          background-color: #E30510;
+        }
+        &.new {
+          background-color: #52CE00;
+        }
+        &.best {
+          background-color: #FFC000;
+        }
+        &.mark {
+          background-color: #B9D400;
+        }
+        &.sale-b {
+          background-color: #E30574;
+        }
+        &.choice {
+          background-color: #7D1A73;
+        }
+        &.credit {
+          background-color: #0080FF;
+        }
+        &.month {
+          background-color: #0033FF;
+        }
+      }
     }
   }
-}
-#tabs_content {
-  > * {
-    display: none;
-  }
-  > .open {
-    display: block;
+  &__content {
+    > div {
+      display: none;
+    }
+    > .open {
+      display: block;
+    }
   }
 }

@@ -61,6 +61,14 @@ $(document).ready(function () {
 	      fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
 	      asNavFor: slider // Связь со слайдерами
 	    });
+	
+	    // Кастомные стрелки
+	    slider.find('.slider-arrow--prev').on('click', function () {
+	      slider.slick('slickPrev');
+	    });
+	    slider.find('.slider-arrow--next').on('click', function () {
+	      slider.slick('slickNext');
+	    });
 	  }
 	}
 	// slider();
@@ -83,51 +91,25 @@ $(document).ready(function () {
 	}
 	slider1($('.js-slider-1'));
 	
-	// Слайдер с одним слайдом и кастомными стрелками
-	function slider2(block) {
-	  var slider = block.find('.js-slider');
-	  if (slider.length) {
-	    slider.slick({
-	      swipe: true,
-	      draggable: true,
-	      arrows: false,
-	      infinite: false,
-	    });
-	    // Кастомные стрелки
-	    block.find('.slider-arrow--prev').on('click', function () {
-	      slider.slick('slickPrev');
-	      console.log('ll');
-	    });
-	    block.find('.slider-arrow--next').on('click', function () {
-	      slider.slick('slickNext');
-	    });
-	  }
-	}
-	slider2($('.welcome__slider-container'));
-	
 	// Слайдер с 4 слайдами
-	function slider3(block) {
-	  var slider = block.find('.js-slider');
-	  if (slider.length) {
-	    slider.slick({
-	      slidesToShow: 4,
-	      slidesToScroll: 1,
-	      swipe: true,
-	      draggable: true,
-	      arrows: false,
-	      infinite: false,
-	    });
-	    // Кастомные стрелки
-	    block.find('.slider-arrow--prev').on('click', function () {
-	      slider.slick('slickPrev');
-	      console.log('ll');
-	    });
-	    block.find('.slider-arrow--next').on('click', function () {
-	      slider.slick('slickNext');
+	function slider2(block) {
+	  if (block.length) {
+	    block.each(function () {
+	      var $this = $(this),
+	          slider = $this.find('.js-slider');
+	      slider.slick({
+	        slidesToShow: 4,
+	        slidesToScroll: 1,
+	        swipe: true,
+	        draggable: true,
+	        infinite: false,
+	        prevArrow: '<div class="slider-arrow slider-arrow--prev"><img src="img/arrow.svg"></div>',
+	        nextArrow: '<div class="slider-arrow slider-arrow--next"><img src="img/arrow.svg"></div>',
+	      });
 	    });
 	  }
 	}
-	slider3($('.slider-cards'));
+	slider2($('.slider-cards'));
 	// libs-settings/fullpage_settings.js
 	// libs-settings/tinyscrollbar-settings.js
 	// libs-settings/tooltipster-settings.js
@@ -232,29 +214,45 @@ $(document).ready(function () {
 	// };
 	// fontResize();
 
-	// // Табы
-	// function tabs(tabs) {
-	// 	if (tabs.length) {
-	// 		tabs.each(function() {
-	// 			var trigger = $(this).find('#tabs_triggers').children(),
-	// 					content = $(this).find('#tabs_content').children(),
-	// 					time = 300;
-	// 			trigger.click(function () {
-	// 				var $this = $(this),
-	// 						index = $this.index();
-	// 				if (!$this.hasClass('active')) {
-	// 					trigger.removeClass('active');
-	// 					$this.addClass('active');
-	// 					content.hide();
-	// 					content.eq(index).fadeIn(time);
-	// 				}else {
-	// 					return false;
-	// 				}
-	// 			});
-	// 		});
-	// 	}
-	// }
-	// tabs($('.js_tabs'));
+	// Табы
+	function tabs(tabs) {
+		if (tabs.length) {
+			tabs.each(function() {
+				var trigger = $(this).find('#tabs_triggers').children(),
+						content = $(this).find('#tabs_content').children(),
+						time = 300;
+				trigger.click(function () {
+					var $this = $(this),
+							index = $this.index();
+					if (!$this.hasClass('active')) {
+						trigger.removeClass('active');
+						$this.addClass('active');
+						content.hide().removeClass('open');
+						content.eq(index).fadeIn(time).addClass('open');
+						tabs.find('.slick-slider').slick('setPosition');
+					}else {
+						return false;
+					}
+				});
+			});
+		}
+	}
+	tabs($('.js_tabs'));
+
+	// Выпадайка при клике
+	function dropClick(btn) {
+		if (btn.length) {
+			btn.each(function () {
+				var $this = $(this),
+						id = $this.data('id'),
+						dropBlock = $(id);
+				$this.on('click', function () {
+					dropBlock.toggleClass('open');
+				});
+			});
+		}
+	}
+	dropClick($('.js-drop-click'));
 
 	// // Аккордеон
 	// function accordeon(accordeon, mobile) {
