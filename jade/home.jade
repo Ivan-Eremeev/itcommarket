@@ -18,6 +18,7 @@ include blocks/card.jade
 include blocks/item.jade
 include blocks/icon.jade
 include blocks/brand.jade
+include blocks/article.jade
 
 block content
 
@@ -36,7 +37,7 @@ block content
 							// banner
 							.banner
 								.banner__content 
-									.banner__title Онлайн-касса<br>под ключ
+									h2.banner__title Онлайн-касса<br>под ключ
 									.banner__text Регистрация. Подключение. Настройка.
 									.banner__subtext
 										p Наши эксперты подберут подходящую кассу для вашего бизнеса.
@@ -74,7 +75,7 @@ block content
 
 			// sales
 			.sales
-				.title.title--center Актуальные акции
+				h2.title.title--center Актуальные акции
 				.row 
 					.sales__col
 						+item('При покупке кассы в ITCOM Market','Электронная подпись со скидкой 30%')
@@ -89,7 +90,7 @@ block content
 			// services
 			.services
 				.title-flex
-					.title Решения для вашего бизнеса
+					h2.title Решения для вашего бизнеса
 					a(href="#").more-btn Все решения
 				.row 
 					.services__col
@@ -113,7 +114,7 @@ block content
 			// services
 			.services
 				.title-flex
-					.title Услуги для бесперебойной работы ККТ
+					h2.title Услуги для бесперебойной работы ККТ
 					a(href="#").more-btn Смотреть все услуги
 				.row 
 					.services__col
@@ -129,7 +130,7 @@ block content
 			// popular
 			.popular
 				.title-flex
-					.title Популярные товары
+					h2.title Популярные товары
 					a(href="#").more-btn Все товары
 				// slider-cards
 				.slider-cards
@@ -146,7 +147,7 @@ block content
 
 			// brands
 			.brands
-				.title.title--center Товары популярных брендов
+				h2.title.title--center Товары популярных брендов
 				.brands__row 
 					.brands__col
 						+brand('img/brand_1.png')
@@ -163,7 +164,7 @@ block content
 			// popular
 			.popular.popular--mb
 				.title-flex
-					.title Мы рекомендуем
+					h2.title Мы рекомендуем
 					a(href="#").more-btn Перейти в каталог
 				
 				// tabs
@@ -243,77 +244,105 @@ block content
 				//	/tabs
 			//	/popular
 
-			// feedback
-			.feedback
-				.feedback__title Подбор кассы по параметрам
-				.feedback__text Подбор онлайн-кассы от ITCOM Market среди 3000 моделей специально для вас
-				form(action="#").feedback__form
+			// selection
+			.selection
+				h2.selection__title Подбор кассы по параметрам
+				.selection__text Подбор онлайн-кассы от ITCOM Market среди 3000 моделей специально для вас
+				form(action="#").selection__form
 
-					.feedback__select.input Вид деятельности
-						.feedback__drop 
-							ul.feedback__list
+					.selection__select.input Вид деятельности
+						.selection__drop 
+							ul.selection__list
 								li
 									input(type="checkbox")#business_0
-									label(for="business_0").feedback__checkbox
-									label(for="business_0").feedback__label-text Аптека
+									label(for="business_0").selection__checkbox
+									label(for="business_0").selection__label-text Аптека
 								li
 									input(type="checkbox")#business_1
-									label(for="business_1").feedback__checkbox
-									label(for="business_1").feedback__label-text Кафе/бар/ресторан
+									label(for="business_1").selection__checkbox
+									label(for="business_1").selection__label-text Кафе/бар/ресторан
 								li
 									input(type="checkbox")#business_2
-									label(for="business_2").feedback__checkbox
-									label(for="business_2").feedback__label-text Курьерские услуги
+									label(for="business_2").selection__checkbox
+									label(for="business_2").selection__label-text Курьерские услуги
 								li
 									input(type="checkbox")#business_3
-									label(for="business_3").feedback__checkbox
-									label(for="business_3").feedback__label-text Магазин у дома
+									label(for="business_3").selection__checkbox
+									label(for="business_3").selection__label-text Магазин у дома
 								li
 									input(type="checkbox")#business_4
-									label(for="business_4").feedback__checkbox
-									label(for="business_4").feedback__label-text Салоны красоты/медцентры
+									label(for="business_4").selection__checkbox
+									label(for="business_4").selection__label-text Салоны красоты/медцентры
 								li
 									input(type="checkbox")#business_5
-									label(for="business_5").feedback__checkbox
-									label(for="business_5").feedback__label-text Транспорт
+									label(for="business_5").selection__checkbox
+									label(for="business_5").selection__label-text Транспорт
 								li
 									input(type="checkbox")#business_6
-									label(for="business_6").feedback__checkbox
-									label(for="business_6").feedback__label-text Услуги
+									label(for="business_6").selection__checkbox
+									label(for="business_6").selection__label-text Услуги
 
-					.feedback__select.input Характер работы
-						.feedback__drop 
-							ul.feedback__list
+					.selection__select.input Характер работы
+						.selection__drop 
+							ul.selection__list
 								li
 									input(type="checkbox")#character_0
-									label(for="character_0").feedback__checkbox
-									label(for="character_0").feedback__label-text Разъездной
+									label(for="character_0").selection__checkbox
+									label(for="character_0").selection__label-text Разъездной
 								li
 									input(type="checkbox")#character_1
-									label(for="character_1").feedback__checkbox
-									label(for="character_1").feedback__label-text Смешанный
+									label(for="character_1").selection__checkbox
+									label(for="character_1").selection__label-text Смешанный
 								li
 									input(type="checkbox")#character_2
-									label(for="character_2").feedback__checkbox
-									label(for="character_2").feedback__label-text Стационарный
+									label(for="character_2").selection__checkbox
+									label(for="character_2").selection__label-text Стационарный
 
-					.feedback__select.input Ценовой сегмент
-						.feedback__drop 
-							ul.feedback__list
+					.selection__select.input Ценовой сегмент
+						.selection__drop 
+							ul.selection__list
 								li
 									input(type="checkbox")#segment_0
-									label(for="segment_0").feedback__checkbox
-									label(for="segment_0").feedback__label-text Высокий
+									label(for="segment_0").selection__checkbox
+									label(for="segment_0").selection__label-text Высокий
 								li
 									input(type="checkbox")#segment_1
-									label(for="segment_1").feedback__checkbox
-									label(for="segment_1").feedback__label-text Низкий
+									label(for="segment_1").selection__checkbox
+									label(for="segment_1").selection__label-text Низкий
 								li
 									input(type="checkbox")#segment_2
-									label(for="segment_2").feedback__checkbox
-									label(for="segment_2").feedback__label-text Средний
+									label(for="segment_2").selection__checkbox
+									label(for="segment_2").selection__label-text Средний
 
 					button(type="submit").btn Подобрать кассу
+			//	/selection
+
+			// articles
+			.articles
+				.title-flex
+					h2.title Экспертные статьи
+					a(href="#").more-btn Все публикации
+				.row 
+					.articles__col 
+						+article
+					.articles__col 
+						+article
+					.articles__col 
+						+article
+					.articles__col 
+						+article
+			//	/articles
+
+			// feedback
+			.feedback
+				h2.title.title--center Затрудняетесь с подбором кассовой техники?
+				.feedback__text Ответьте на пару вопросов, мы предложим вам оптимальное решение!
+				.feedback__row 
+					input(type="text" placeholder="Сфера вашего бизнеса" name="name").feedback__input.input
+					input(type="text" placeholder="Есть ли у вас кассовое оборудование" name="message").feedback__input.input
+					input(type="text" placeholder="Ваш email" name="email").feedback__input.feedback__input--maw.input
+					input(type="text" placeholder="Номер телефона" name="tel").feedback__input.feedback__input--maw.input
+					.btn Отправить заявку
 			//	/feedback
 			
 		include blocks/footer.jade

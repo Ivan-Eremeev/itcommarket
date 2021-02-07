@@ -1,0 +1,50 @@
+.article {
+  display: block;
+  border-radius: 24px;
+  box-shadow: $shadow;
+  overflow: hidden;
+  color: $black;
+  span {
+    display: block;
+  }
+  &__img {
+    height: 272px;
+    background-color: $yellow;
+    overflow: hidden;
+    &--height {
+      height: 165px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $trans;
+    }
+  }
+  &__content {
+    padding: 32px;
+  }
+  &__title {
+    max-height: 45px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 22px;
+    overflow: hidden;
+    font-weight: bold;
+    transition: $trans;
+  }
+  &__date {
+    font-size: 12px;
+    color: $gray;
+  }
+  &:hover {
+    .article__title {
+      color: $orange;
+    }
+    .article__img {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+} 

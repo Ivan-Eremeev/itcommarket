@@ -1,0 +1,25 @@
+.footer-menu {
+  margin-bottom: 35px;
+  &__nav {
+    
+  }
+  &__col {
+    flex-grow: 1;
+  }
+  &__menu {
+    margin-bottom: 8px;
+  }
+  &__title {
+    font-size: 20px;
+    color: $gray;
+    margin-bottom: 10px;
+  }
+  &__list {
+    li {
+      margin-bottom: 5px;
+    }
+    a {
+      color: $black;
+    }
+  }
+}
