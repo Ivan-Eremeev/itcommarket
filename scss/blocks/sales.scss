@@ -5,6 +5,8 @@
   }
   &__col {
     @include col(4);
+    @include col-md(8);
+    @include col-xs(16);
     margin-bottom: $gutter;
   }
 }

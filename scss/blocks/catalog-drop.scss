@@ -52,6 +52,7 @@
     bottom: 45px;
     transform: translate(-50%,0);
     transition: $trans;
+    white-space: nowrap;
     &:hover {
       background-color: $orange;
       color: #fff;
@@ -59,10 +60,14 @@
   }
   &__content {
     width: 68.5%;
-    display: flex;
     padding: 34px 40px 30px 65px;
   }
+  &__row {
+    display: flex;
+    margin-left: -16px;
+  }
   &__col {
+    padding-left: 16px;
     &--1 {
       width: 44%;
     }
@@ -88,6 +93,14 @@
       &:hover {
         color: $orange;
       }
+    }
+  }
+  @media (max-width: $break_md) {
+    &__img-block {
+      display: none;
+    }
+    &__content {
+      width: 100%;
     }
   }
 }

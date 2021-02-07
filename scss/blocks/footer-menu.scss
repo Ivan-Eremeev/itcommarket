@@ -1,10 +1,14 @@
 .footer-menu {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   &__nav {
     
   }
+  .row {
+    flex-wrap: nowrap;
+  }
   &__col {
     flex-grow: 1;
+    margin-bottom: 20px;
   }
   &__menu {
     margin-bottom: 8px;
@@ -25,5 +29,8 @@
         color: $orange;
       }
     }
+  }
+  @media (max-width: $break_md) {
+    display: none;
   }
 }

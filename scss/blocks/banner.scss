@@ -24,4 +24,18 @@
   .btn {
     padding: 14px 40px 15px 40px;
   }
+  @media (max-width: $break_sm) {
+    padding: 40px;
+    &__title {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    &__subtext {
+      margin-bottom: 15px;
+    }
+  }
 }

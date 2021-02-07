@@ -22,330 +22,331 @@ include blocks/article.jade
 
 block content
 
-	.page.wrapper
+	.page
+		.wrapper
 
-		include blocks/header.jade
-		
-		main.content
-
-			// welcome
-			.welcome
-				.row
-				
-					.welcome__col.welcome__col--1
-						.welcome__slider.welcome__slider--banner.js-slider-1
-							// banner
-							.banner
-								.banner__content 
-									h2.banner__title Онлайн-касса<br>под ключ
-									.banner__text Регистрация. Подключение. Настройка.
-									.banner__subtext
-										p Наши эксперты подберут подходящую кассу для вашего бизнеса.
-										p Гарантия соответствия 54-ФЗ — 100%
-									.btn Выбрать кассу под ключ
-							//	/banner
-							// banner
-							.banner
-								.banner__content 
-									.banner__title Онлайн-касса<br>под ключ
-									.banner__text Регистрация. Подключение. Настройка.
-									.banner__subtext
-										p Наши эксперты подберут подходящую кассу для вашего бизнеса.
-										p Гарантия соответствия 54-ФЗ — 100%
-									.btn Выбрать кассу под ключ
-							//	/banner
-							// banner
-							.banner
-								.banner__content 
-									.banner__title Онлайн-касса<br>под ключ
-									.banner__text Регистрация. Подключение. Настройка.
-									.banner__subtext
-										p Наши эксперты подберут подходящую кассу для вашего бизнеса.
-										p Гарантия соответствия 54-ФЗ — 100%
-									.btn Выбрать кассу под ключ
-							//	/banner
-
-					.welcome__col.welcome__col--2
-						.welcome__slider-container
-							.welcome__slider.welcome__slider--card.js-slider-1
-								+card
-								+card
-								+card
-			//	welcome
-
-			// sales
-			.sales
-				h2.title.title--center Актуальные акции
-				.row 
-					.sales__col
-						+item('При покупке кассы в ITCOM Market','Электронная подпись со скидкой 30%')
-					.sales__col
-						+item('При заказе от 10 000 руб','Бесплатная доставка')
-					.sales__col
-						+item('Хотите узнать больше, как','Купить в рассрочку онлайн-кассу')
-					.sales__col
-						+item('При заказе от 5-ти касс Эвотор','Установка и настройка кассы в подарок')
-			//	/sales
-
-			// services
-			.services
-				.title-flex
-					h2.title Решения для вашего бизнеса
-					a(href="#").more-btn Все решения
-				.row 
-					.services__col
-						+icon('Интернет-магазин')
-					.services__col
-						+icon('Магазин розничной торговли')
-					.services__col
-						+icon('Минимаркет')
-					.services__col
-						+icon('Кафе и ресторан')
-					.services__col
-						+icon('Фастфуд')
-					.services__col
-						+icon('Бар')
-					.services__col
-						+icon('Салон красоты')
-					.services__col
-						+icon('Автосервис')
-			//	/services
-
-			// services
-			.services
-				.title-flex
-					h2.title Услуги для бесперебойной работы ККТ
-					a(href="#").more-btn Смотреть все услуги
-				.row 
-					.services__col
-						+item('Услуга','Ввод ККТ в эксплуатацию')
-					.services__col
-						+item('Услуга','Сопровождение вашей ККТ')
-					.services__col
-						+item('Услуга','Программное обновление ККТ')
-					.services__col
-						+item('Услуга','Ремонт ККТ')
-			//	/services
-
-			// popular
-			.popular
-				.title-flex
-					h2.title Популярные товары
-					a(href="#").more-btn Все товары
-				// slider-cards
-				.slider-cards
-
-					.js-slider
-						+card
-						+card
-						+card
-						+card
-						+card
-						+card
-				//	/slider-cards
-			//	/popular
-
-			// brands
-			.brands
-				h2.title.title--center Товары популярных брендов
-				.brands__row 
-					.brands__col
-						+brand('img/brand_1.png')
-					.brands__col
-						+brand('img/brand_2.png')
-					.brands__col
-						+brand('img/brand_3.png')
-					.brands__col
-						+brand('img/brand_4.png')
-					.brands__col
-						+brand('img/brand_5.png')
-			//	/brands
-
-			// popular
-			.popular.popular--mb
-				.title-flex
-					h2.title Мы рекомендуем
-					a(href="#").more-btn Перейти в каталог
-				
-				// tabs
-				.tabs.js_tabs
-					ul#tabs_triggers.tabs__triggers
-						li.active.stock Акция
-						li.sale Скидка
-						li.new Новинка
-						li.mark Для маркировки
-						li.credit Рассрочка
-					#tabs_content.tabs__content
-
-						div.open
-							// slider-cards
-							.slider-cards
-
-								.js-slider
-									+card
-									+card
-									+card
-									+card
-									+card
-									+card
-							//	/slider-cards
-
-						div
-							// slider-cards
-							.slider-cards
-
-								.js-slider
-									+card
-									+card
-									+card
-									+card
-									+card
-									+card
-							//	/slider-cards
-
-						div
-							// slider-cards
-							.slider-cards
-
-								.js-slider
-									+card
-									+card
-									+card
-									+card
-									+card
-									+card
-							//	/slider-cards
-
-						div
-							// slider-cards
-							.slider-cards
-
-								.js-slider
-									+card
-									+card
-									+card
-									+card
-									+card
-									+card
-							//	/slider-cards
-
-						div
-							// slider-cards
-							.slider-cards
-
-								.js-slider
-									+card
-									+card
-									+card
-									+card
-									+card
-									+card
-							//	/slider-cards
-				//	/tabs
-			//	/popular
-
-			// selection
-			.selection
-				h2.selection__title Подбор кассы по параметрам
-				.selection__text Подбор онлайн-кассы от ITCOM Market среди 3000 моделей специально для вас
-				form(action="#").selection__form
-
-					.selection__select.input Вид деятельности
-						.selection__drop 
-							ul.selection__list
-								li
-									input(type="checkbox")#business_0
-									label(for="business_0").selection__checkbox
-									label(for="business_0").selection__label-text Аптека
-								li
-									input(type="checkbox")#business_1
-									label(for="business_1").selection__checkbox
-									label(for="business_1").selection__label-text Кафе/бар/ресторан
-								li
-									input(type="checkbox")#business_2
-									label(for="business_2").selection__checkbox
-									label(for="business_2").selection__label-text Курьерские услуги
-								li
-									input(type="checkbox")#business_3
-									label(for="business_3").selection__checkbox
-									label(for="business_3").selection__label-text Магазин у дома
-								li
-									input(type="checkbox")#business_4
-									label(for="business_4").selection__checkbox
-									label(for="business_4").selection__label-text Салоны красоты/медцентры
-								li
-									input(type="checkbox")#business_5
-									label(for="business_5").selection__checkbox
-									label(for="business_5").selection__label-text Транспорт
-								li
-									input(type="checkbox")#business_6
-									label(for="business_6").selection__checkbox
-									label(for="business_6").selection__label-text Услуги
-
-					.selection__select.input Характер работы
-						.selection__drop 
-							ul.selection__list
-								li
-									input(type="checkbox")#character_0
-									label(for="character_0").selection__checkbox
-									label(for="character_0").selection__label-text Разъездной
-								li
-									input(type="checkbox")#character_1
-									label(for="character_1").selection__checkbox
-									label(for="character_1").selection__label-text Смешанный
-								li
-									input(type="checkbox")#character_2
-									label(for="character_2").selection__checkbox
-									label(for="character_2").selection__label-text Стационарный
-
-					.selection__select.input Ценовой сегмент
-						.selection__drop 
-							ul.selection__list
-								li
-									input(type="checkbox")#segment_0
-									label(for="segment_0").selection__checkbox
-									label(for="segment_0").selection__label-text Высокий
-								li
-									input(type="checkbox")#segment_1
-									label(for="segment_1").selection__checkbox
-									label(for="segment_1").selection__label-text Низкий
-								li
-									input(type="checkbox")#segment_2
-									label(for="segment_2").selection__checkbox
-									label(for="segment_2").selection__label-text Средний
-
-					button(type="submit").btn Подобрать кассу
-			//	/selection
-
-			// articles
-			.articles
-				.title-flex
-					h2.title Экспертные статьи
-					a(href="#").more-btn Все публикации
-				.row 
-					.articles__col 
-						+article
-					.articles__col 
-						+article
-					.articles__col 
-						+article
-					.articles__col 
-						+article
-			//	/articles
-
-			// feedback
-			.feedback
-				h2.title.title--center Затрудняетесь с подбором кассовой техники?
-				.feedback__text Ответьте на пару вопросов, мы предложим вам оптимальное решение!
-				.feedback__row 
-					input(type="text" placeholder="Сфера вашего бизнеса" name="name").feedback__input.input
-					input(type="text" placeholder="Есть ли у вас кассовое оборудование" name="message").feedback__input.input
-					input(type="text" placeholder="Ваш email" name="email").feedback__input.feedback__input--maw.input
-					input(type="text" placeholder="Номер телефона" name="tel").feedback__input.feedback__input--maw.input
-					.btn Отправить заявку
-			//	/feedback
+			include blocks/header.jade
 			
-		include blocks/footer.jade
+			main.content
+
+				// welcome
+				.welcome
+					.row
+					
+						.welcome__col.welcome__col--1
+							.welcome__slider.welcome__slider--banner.js-slider-1
+								// banner
+								.banner
+									.banner__content 
+										h2.banner__title Онлайн-касса<br>под ключ
+										.banner__text Регистрация. Подключение. Настройка.
+										.banner__subtext
+											p Наши эксперты подберут подходящую кассу для вашего бизнеса.
+											p Гарантия соответствия 54-ФЗ — 100%
+										.btn Выбрать кассу под ключ
+								//	/banner
+								// banner
+								.banner
+									.banner__content 
+										.banner__title Онлайн-касса<br>под ключ
+										.banner__text Регистрация. Подключение. Настройка.
+										.banner__subtext
+											p Наши эксперты подберут подходящую кассу для вашего бизнеса.
+											p Гарантия соответствия 54-ФЗ — 100%
+										.btn Выбрать кассу под ключ
+								//	/banner
+								// banner
+								.banner
+									.banner__content 
+										.banner__title Онлайн-касса<br>под ключ
+										.banner__text Регистрация. Подключение. Настройка.
+										.banner__subtext
+											p Наши эксперты подберут подходящую кассу для вашего бизнеса.
+											p Гарантия соответствия 54-ФЗ — 100%
+										.btn Выбрать кассу под ключ
+								//	/banner
+
+						.welcome__col.welcome__col--2
+							.welcome__slider-container
+								.welcome__slider.welcome__slider--card.js-slider-1
+									+card
+									+card
+									+card
+				//	welcome
+
+				// sales
+				.sales
+					h2.title.title--center Актуальные акции
+					.row 
+						.sales__col
+							+item('При покупке кассы в ITCOM Market','Электронная подпись со скидкой 30%')
+						.sales__col
+							+item('При заказе от 10 000 руб','Бесплатная доставка')
+						.sales__col
+							+item('Хотите узнать больше, как','Купить в рассрочку онлайн-кассу')
+						.sales__col
+							+item('При заказе от 5-ти касс Эвотор','Установка и настройка кассы в подарок')
+				//	/sales
+
+				// services
+				.services
+					.title-flex
+						h2.title Решения для вашего бизнеса
+						a(href="#").more-btn Все решения
+					.row 
+						.services__col
+							+icon('Интернет-магазин')
+						.services__col
+							+icon('Магазин розничной торговли')
+						.services__col
+							+icon('Минимаркет')
+						.services__col
+							+icon('Кафе и ресторан')
+						.services__col
+							+icon('Фастфуд')
+						.services__col
+							+icon('Бар')
+						.services__col
+							+icon('Салон красоты')
+						.services__col
+							+icon('Автосервис')
+				//	/services
+
+				// services
+				.services
+					.title-flex
+						h2.title Услуги для бесперебойной работы ККТ
+						a(href="#").more-btn Смотреть все услуги
+					.row 
+						.services__col
+							+item('Услуга','Ввод ККТ в эксплуатацию')
+						.services__col
+							+item('Услуга','Сопровождение вашей ККТ')
+						.services__col
+							+item('Услуга','Программное обновление ККТ')
+						.services__col
+							+item('Услуга','Ремонт ККТ')
+				//	/services
+
+				// popular
+				.popular
+					.title-flex
+						h2.title Популярные товары
+						a(href="#").more-btn Все товары
+					// slider-cards
+					.slider-cards
+
+						.js-slider
+							+card
+							+card
+							+card
+							+card
+							+card
+							+card
+					//	/slider-cards
+				//	/popular
+
+				// brands
+				.brands
+					h2.title.title--center Товары популярных брендов
+					.brands__row 
+						.brands__col
+							+brand('img/brand_1.png')
+						.brands__col
+							+brand('img/brand_2.png')
+						.brands__col
+							+brand('img/brand_3.png')
+						.brands__col
+							+brand('img/brand_4.png')
+						.brands__col
+							+brand('img/brand_5.png')
+				//	/brands
+
+				// popular
+				.popular.popular--mb
+					.title-flex
+						h2.title Мы рекомендуем
+						a(href="#").more-btn Перейти в каталог
+					
+					// tabs
+					.tabs.js_tabs
+						ul#tabs_triggers.tabs__triggers
+							li.active.stock Акция
+							li.sale Скидка
+							li.new Новинка
+							li.mark Для маркировки
+							li.credit Рассрочка
+						#tabs_content.tabs__content
+
+							div.open
+								// slider-cards
+								.slider-cards
+
+									.js-slider
+										+card
+										+card
+										+card
+										+card
+										+card
+										+card
+								//	/slider-cards
+
+							div
+								// slider-cards
+								.slider-cards
+
+									.js-slider
+										+card
+										+card
+										+card
+										+card
+										+card
+										+card
+								//	/slider-cards
+
+							div
+								// slider-cards
+								.slider-cards
+
+									.js-slider
+										+card
+										+card
+										+card
+										+card
+										+card
+										+card
+								//	/slider-cards
+
+							div
+								// slider-cards
+								.slider-cards
+
+									.js-slider
+										+card
+										+card
+										+card
+										+card
+										+card
+										+card
+								//	/slider-cards
+
+							div
+								// slider-cards
+								.slider-cards
+
+									.js-slider
+										+card
+										+card
+										+card
+										+card
+										+card
+										+card
+								//	/slider-cards
+					//	/tabs
+				//	/popular
+
+				// selection
+				.selection
+					h2.selection__title Подбор кассы по параметрам
+					.selection__text Подбор онлайн-кассы от ITCOM Market среди 3000 моделей специально для вас
+					form(action="#").selection__form
+
+						.selection__select.input Вид деятельности
+							.selection__drop 
+								ul.selection__list
+									li
+										input(type="checkbox")#business_0
+										label(for="business_0").selection__checkbox
+										label(for="business_0").selection__label-text Аптека
+									li
+										input(type="checkbox")#business_1
+										label(for="business_1").selection__checkbox
+										label(for="business_1").selection__label-text Кафе/бар/ресторан
+									li
+										input(type="checkbox")#business_2
+										label(for="business_2").selection__checkbox
+										label(for="business_2").selection__label-text Курьерские услуги
+									li
+										input(type="checkbox")#business_3
+										label(for="business_3").selection__checkbox
+										label(for="business_3").selection__label-text Магазин у дома
+									li
+										input(type="checkbox")#business_4
+										label(for="business_4").selection__checkbox
+										label(for="business_4").selection__label-text Салоны красоты/медцентры
+									li
+										input(type="checkbox")#business_5
+										label(for="business_5").selection__checkbox
+										label(for="business_5").selection__label-text Транспорт
+									li
+										input(type="checkbox")#business_6
+										label(for="business_6").selection__checkbox
+										label(for="business_6").selection__label-text Услуги
+
+						.selection__select.input Характер работы
+							.selection__drop 
+								ul.selection__list
+									li
+										input(type="checkbox")#character_0
+										label(for="character_0").selection__checkbox
+										label(for="character_0").selection__label-text Разъездной
+									li
+										input(type="checkbox")#character_1
+										label(for="character_1").selection__checkbox
+										label(for="character_1").selection__label-text Смешанный
+									li
+										input(type="checkbox")#character_2
+										label(for="character_2").selection__checkbox
+										label(for="character_2").selection__label-text Стационарный
+
+						.selection__select.input Ценовой сегмент
+							.selection__drop 
+								ul.selection__list
+									li
+										input(type="checkbox")#segment_0
+										label(for="segment_0").selection__checkbox
+										label(for="segment_0").selection__label-text Высокий
+									li
+										input(type="checkbox")#segment_1
+										label(for="segment_1").selection__checkbox
+										label(for="segment_1").selection__label-text Низкий
+									li
+										input(type="checkbox")#segment_2
+										label(for="segment_2").selection__checkbox
+										label(for="segment_2").selection__label-text Средний
+
+						button(type="submit").btn Подобрать кассу
+				//	/selection
+
+				// articles
+				.articles
+					.title-flex
+						h2.title Экспертные статьи
+						a(href="#").more-btn Все публикации
+					.row 
+						.articles__col 
+							+article
+						.articles__col 
+							+article
+						.articles__col 
+							+article
+						.articles__col 
+							+article
+				//	/articles
+
+				// feedback
+				.feedback
+					h2.title.title--center Затрудняетесь с подбором кассовой техники?
+					.feedback__text Ответьте на пару вопросов, мы предложим вам оптимальное решение!
+					.feedback__row 
+						input(type="text" placeholder="Сфера вашего бизнеса" name="name").feedback__input.input
+						input(type="text" placeholder="Есть ли у вас кассовое оборудование" name="message").feedback__input.input
+						input(type="text" placeholder="Ваш email" name="email").feedback__input.feedback__input--maw.input
+						input(type="text" placeholder="Номер телефона" name="tel").feedback__input.feedback__input--maw.input
+						.btn Отправить заявку
+				//	/feedback
+				
+			include blocks/footer.jade
 
 block js-libs
 	script(src="js/libs/jquery.min.js")

@@ -89,6 +89,20 @@ function slider2(block) {
         infinite: false,
         prevArrow: '<div class="slider-arrow slider-arrow--prev"><img src="img/arrow.svg"></div>',
         nextArrow: '<div class="slider-arrow slider-arrow--next"><img src="img/arrow.svg"></div>',
+        responsive: [
+          {
+            breakpoint: breakMd,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: breakXs,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+        ]
       });
     });
   }

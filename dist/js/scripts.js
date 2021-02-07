@@ -8,7 +8,7 @@ $(document).ready(function () {
 	// Брэйкпоинты js
 	var	breakXl = 1400,
 			breakLg = 1200,
-			breakMd = 1025,
+			breakMd = 1050,
 			breakSm = 769,
 			breakXs = 500;
 	
@@ -105,6 +105,20 @@ $(document).ready(function () {
 	        infinite: false,
 	        prevArrow: '<div class="slider-arrow slider-arrow--prev"><img src="img/arrow.svg"></div>',
 	        nextArrow: '<div class="slider-arrow slider-arrow--next"><img src="img/arrow.svg"></div>',
+	        responsive: [
+	          {
+	            breakpoint: breakMd,
+	            settings: {
+	              slidesToShow: 2,
+	            }
+	          },
+	          {
+	            breakpoint: breakXs,
+	            settings: {
+	              slidesToShow: 1,
+	            }
+	          }
+	        ]
 	      });
 	    });
 	  }
