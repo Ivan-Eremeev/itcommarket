@@ -77,7 +77,10 @@
   @media (max-width: $break_md) {
     &__list {
       justify-content: center;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
+      li {
+        margin-bottom: 20px;
+      }
     }
     &__btn {
       order: 3;
@@ -86,6 +89,9 @@
   @media (max-width: $break_sm) {
     &__search {
       margin-bottom: 30px;
+    }
+    &__list {
+      flex-wrap: wrap;
     }
   }
 }

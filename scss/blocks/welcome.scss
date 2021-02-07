@@ -39,28 +39,14 @@
       }
     }
     &--banner {
-      border-radius: 24px;
-      overflow: hidden;
       .slider-arrow {
-        opacity: 0;
         &--prev {
-          left: 48px;
+          left: 20px;
         }
         &--next {
-          right: 48px;
+          right: 20px;
         }
       }
-      &:hover {
-        .slider-arrow {
-          opacity: 1;
-          &.slick-disabled {
-            opacity: 0;
-          }
-        }
-      }
-    }
-    .banner {
-      border-radius: 0;
     }
     .slick-list {
       height: 100%;
@@ -70,6 +56,11 @@
     }
     .slick-slide {
       height: 100%;
+      opacity: 0;
+      transition: 0.5s;
+      &.slick-active {
+        opacity: 1;
+      }
       > div {
         height: 100%;
       }
@@ -87,14 +78,16 @@
         display: none;
       }
     }
+  }
+  @media (max-width: $break_sm) {
     &__slider {
       &--banner {
         .slider-arrow {
           &--prev {
-            left: 10px;
+            left: -15px;
           }
           &--next {
-            right: 10px;
+            right: -15px;
           }
         }
       }

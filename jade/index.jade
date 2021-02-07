@@ -16,19 +16,17 @@ block style-libs
 
 block content
 
-	.page
+	.page.wrapper
 
-		.wrapper
+		include blocks/header.jade
+		
+		main.content
 
-			include blocks/header.jade
+			ul.navPage
+				li
+					a(href="home.html") Главная
 			
-			main.content
-
-				ul.navPage
-					li
-						a(href="home.html") Главная
-				
-			include blocks/footer.jade
+		include blocks/footer.jade
 
 block js-libs
 	script(src="js/libs/jquery.min.js")

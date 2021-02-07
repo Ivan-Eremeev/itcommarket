@@ -103,4 +103,17 @@
       width: 100%;
     }
   }
+  @media (max-width: $break_sm) {
+    &__content {
+      padding: 34px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__col {
+      width: 100%;
+    }
+  }
 }
