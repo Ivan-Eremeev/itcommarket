@@ -1344,11 +1344,17 @@ body {
   .footer-menu__title {
     font-size: 20px;
     color: #979797;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
   .footer-menu__list li {
     margin-bottom: 5px; }
   .footer-menu__list a {
     color: #333; }
+    .footer-menu__list a:hover {
+      color: #E65100; }
 
 .footer-bottom {
   background-color: #333;
