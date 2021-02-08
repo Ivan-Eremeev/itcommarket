@@ -261,10 +261,12 @@ $(document).ready(function () {
 						id = $this.data('id'),
 						dropBlock = $(id);
 				$this.on('click', function () {
+					$this.toggleClass('active');
 					dropBlock.toggleClass('open');
 				});
 				$(document).mouseup(function (e) {
 					if (!dropBlock.is(e.target) && dropBlock.has(e.target).length === 0 && !$this.is(e.target) && $this.has(e.target).length === 0) {
+						$this.removeClass('active');
 						dropBlock.removeClass('open');
 					}
 				});

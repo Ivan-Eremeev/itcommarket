@@ -1,0 +1,147 @@
+extends blocks/base.jade
+
+block title 
+	title Главная
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+include blocks/card.jade
+
+block content
+
+	.page.wrapper
+
+		include blocks/header.jade
+		
+		main.content
+
+			// banner-b
+			.banner-b
+				.banner-b__title
+					p Бесплатная доставка по России от 5 000 ₽
+					p Кассовое оборудование для вашего бизнеса
+			//	/banner-b
+
+			// catalog
+			.catalog
+
+				.catalog__head
+
+					.catalog__checks 
+						.catalog__check
+							img(src="img/cross.svg", alt="").catalog__check-cross
+							span.catalog__check-span Смарт-терминалы с эквайрингом
+						.catalog__check
+							img(src="img/cross.svg", alt="").catalog__check-cross
+							span.catalog__check-span Маркировка
+							
+					form(action="").catalog__sort 
+
+						.catalog__select
+
+							.catalog__select-btn.js-drop-click(data-id="#sortDrop")
+								| Сортировать
+								span.catalog__select-btn-span по популярности
+							.catalog__select-drop#sortDrop
+								.catalog__select-drop-container
+									.catalog__select-drop-row
+										input#select-sort_0(type="radio" name="select-sort" checked)
+										label(for="select-sort_0").catalog__select-drop-radio
+										label(for="select-sort_0").catalog__select-drop-text По популярности
+									.catalog__select-drop-row
+										input#select-sort_1(type="radio" name="select-sort")
+										label(for="select-sort_1").catalog__select-drop-radio
+										label(for="select-sort_1").catalog__select-drop-text По возрастанию цены
+									.catalog__select-drop-row
+										input#select-sort_2(type="radio" name="select-sort")
+										label(for="select-sort_2").catalog__select-drop-radio
+										label(for="select-sort_2").catalog__select-drop-text По убыванию цены
+									.catalog__select-drop-row
+										input#select-sort_3(type="radio" name="select-sort")
+										label(for="select-sort_3").catalog__select-drop-radio
+										label(for="select-sort_3").catalog__select-drop-text По наименованию
+
+						.catalog__view
+							.catalog__view-btn
+								img(src="img/hamburger.svg", alt="")
+							.catalog__view-btn.active
+								img(src="img/tile.svg", alt="")
+
+				.catalog__body
+
+					form(action="").catalog__filters
+
+						.catalog__input
+							input#search_3(type="text" placeholder="Поиск по категории").input
+							label(for="search_3").header-center__zoom
+								img(src="img/zoom.svg", alt="")
+
+					.catalog__cards
+						.row
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+							.catalog__col
+								+card
+
+						.catalog__btn-more 
+							a(href="#").catalog-more-btn Показать еще товары
+
+						// feedback
+						form(action="").feedback.feedback--catalog
+							h2.title.title--center Поможем в выборе
+							.feedback__text Подберем оптимальный пакет оборудования прямо сейчас
+							.feedback__row.feedback__row--equal
+								input(type="text" placeholder="Ваше имя" name="name").feedback__input.input
+								input(type="tel" placeholder="Номер телефона" name="tel").feedback__input.input
+								input(type="text" placeholder="Ваш email" name="email").feedback__input.input
+								.btn Отправить заявку
+						//	/feedback
+			//	/catalog
+				
+		include blocks/footer.jade
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

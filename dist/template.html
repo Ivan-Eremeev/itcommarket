@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Главная</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<!-- header-->
+			<header class="header" id="header">
+				<!-- .header-top-->
+				<div class="header-top">
+					<nav class="header-top__menu tablet-hide">
+						<ul class="header-top__list header-top__list--gray-hover">
+							<li><a href="#">ITCOM</a></li>
+							<li><a href="#">CONSULT</a></li>
+							<li><a href="#">SECURITY</a></li>
+							<li><a class="active" href="#">MARKET</a></li>
+							<li><a href="#">ACADEMY</a></li>
+							<li><a href="#">CLOUD</a></li>
+						</ul>
+					</nav>
+					<ul class="header-top__list header-top__list--orange-hover">
+						<li class="header-top__city js-drop-click" data-id="#dropCity">Санкт-Петербург
+							<ul class="header-top__drop" id="dropCity">
+								<li><a href="#">Москва</a></li>
+								<li><a href="#">Екатеринбург</a></li>
+								<li><a href="#">Новосибирск</a></li>
+							</ul>
+						</li>
+						<li class="tablet-hide"><a href="#">Точки выдачи</a></li>
+						<li><a href="tel:88006004149">8 800 600 41 49</a></li>
+					</ul>
+				</div>
+				<!--	/.header-top-->
+				<!-- header-center-->
+				<div class="header-center"><a class="header-center__logo" href="#"><img src="img/logo.svg" alt=""></a>
+					<div class="header-center__btn btn js-drop-click" data-id="#catalog"><img src="img/subject.svg" alt=""><span class="tablet-hide">Каталог</span><span class="tablet-visible">Меню</span></div>
+					<form class="header-center__search mobile-hide" action="">
+						<input class="header-center__input input" type="text" placeholder="Поиск по сайту, товарам и разделам" id="search_2">
+						<label class="header-center__zoom" for="search_2"><img src="img/zoom.svg" alt=""></label>
+					</form>
+					<div class="header-center__menu tablet-hide">
+						<ul class="header-center__list">
+							<li><img src="img/timer.svg" alt=""><span>Статус заказа</span></li>
+							<li><img src="img/account.svg" alt=""><span>Войти</span></li>
+							<li><img src="img/compare.svg" alt=""><span>Сравнение</span></li>
+							<li><img src="img/favorite.svg" alt=""><span>Ибранное</span></li>
+							<li><img src="img/cart.svg" alt=""><span>Корзина</span></li>
+						</ul>
+					</div>
+					<!-- catalog-drop-->
+					<div class="catalog-drop" id="catalog">
+						<div class="catalog-drop__container">
+							<div class="catalog-drop__img-block"> 
+								<div class="catalog-drop__img"><img src="" alt=""></div><a class="catalog-drop__btn" href="#">Подробно о товаре</a>
+							</div>
+							<div class="catalog-drop__content">
+								<form class="header-center__search mobile-visible" action="">
+									<input class="header-center__input input" type="text" placeholder="Поиск по сайту, товарам и разделам" id="search">
+									<label class="header-center__zoom" for="search"><img src="img/zoom.svg" alt=""></label>
+								</form>
+								<div class="header-center__menu tablet-visible">
+									<ul class="header-center__list">
+										<li><img src="img/timer.svg" alt=""><span>Статус заказа</span></li>
+										<li><img src="img/account.svg" alt=""><span>Войти</span></li>
+										<li><img src="img/compare.svg" alt=""><span>Сравнение</span></li>
+										<li><img src="img/favorite.svg" alt=""><span>Ибранное</span></li>
+										<li><img src="img/cart.svg" alt=""><span>Корзина</span></li>
+									</ul>
+								</div>
+								<div class="catalog-drop__row">
+									<div class="catalog-drop__col catalog-drop__col--1">
+										<div class="catalog-drop__menu">
+											<div class="catalog-drop__title">Каталог</div>
+											<ul class="catalog-drop__list"> 
+												<li><a href="#">Автономные кассы</a></li>
+												<li><a href="#">Фискальные регистраторы </a></li>
+												<li><a href="#">Смарт-терминалы</a></li>
+												<li><a href="#">Смарт-терминалы со встроенным эквайрингом</a></li>
+												<li><a href="#">POS оборудование</a></li>
+												<li><a href="#">Сканеры ШК</a></li>
+												<li><a href="#">Принтеры ШК</a></li>
+												<li><a href="#">Весы</a></li>
+												<li><a href="#">Кассы для интернет магазина</a></li>
+												<li><a href="#">Решения для бизнеса</a></li>
+												<li><a href="#">Программное обеспечение</a></li>
+												<li><a href="#">Маркировка</a></li>
+											</ul>
+										</div>
+										<div class="catalog-drop__menu">
+											<div class="catalog-drop__title">Услуги</div>
+											<ul class="catalog-drop__list">
+												<li><a href="#">Ввод ККТ в эксплуатацию</a></li>
+												<li><a href="#">Сопровождение Вашей ККТ</a></li>
+												<li><a href="#">Программное обновление ККТ</a></li>
+												<li><a href="#">Ремонт</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="catalog-drop__col catalog-drop__col--2">
+										<div class="catalog-drop__menu">
+											<div class="catalog-drop__title">Решения для Вашего бизнеса</div>
+											<ul class="catalog-drop__list">
+												<li><a href="#">Для интернет магазина</a></li>
+												<li><a href="#">Для магазина розничной торговли (мелкая розница, магазины у дома)</a></li>
+												<li><a href="#">Для магазина розничной торговли (минимаркеты)</a></li>
+												<li><a href="#">Для кафе/ресторанов</a></li>
+												<li><a href="#">Для закусочной (фастфуд)</a></li>
+												<li><a href="#">Для бара</a></li>
+												<li><a href="#">Для салона красоты</a></li>
+												<li><a href="#">Для автосервиса </a></li>
+												<li><a href="#">Для предоставления бытовых услуг</a></li>
+											</ul>
+										</div>
+										<div class="catalog-drop__menu">
+											<div class="catalog-drop__title">О компании</div>
+											<ul class="catalog-drop__list">
+												<li><a href="#">О нас</a></li>
+												<li><a href="#">Контакты</a></li>
+												<li><a href="#">Экспертные статьи</a></li>
+											</ul>
+										</div>
+										<div class="catalog-drop__menu">
+											<div class="catalog-drop__title">Партнерство</div>
+											<ul class="catalog-drop__list">
+												<li><a href="#">Партнерство по кассовому оборудованию</a></li>
+												<li><a href="#">Партнерство по решениям для интернет магазинов</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--	/catalog-drop-->
+				</div>
+				<!--	/header-center-->
+				<!-- header-bottom-->
+				<nav class="header-bottom">
+					<ul class="header-bottom__list">
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Скидки</a></li>
+						<li><a href="#">Новинки</a></li>
+						<li><a href="#">Всё для маркировки</a></li>
+						<li><a href="#">Рассрочка</a></li>
+					</ul>
+					<ul class="header-bottom__list">
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Партнёрам</a></li>
+						<li><a href="#">Доставка и оплата</a></li>
+						<li><a href="#">Cервисный центр</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<!--	/header-bottom-->
+			</header>
+			<!-- /header-->
+			<div class="content">
+				<div class="wrapper">
+					<!-- video-bg-->
+					<div class="video-bg" data-vide-bg="mp4: path/to/video1, webm: path/to/video2, ogv: path/to/video3, poster: path/to/poster" data-vide-options="posterType: jpg, loop: false, muted: false, position: 0% 0%"></div>
+					<!-- /video-bg-->
+					<!-- grid&card3d-->
+					<div class="grid">
+						<div class="row">
+							<div class="col">
+								<div class="card3d">
+									<div class="card3d_item"></div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card3d">
+									<div class="card3d_item"></div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card3d">
+									<div class="card3d_item"></div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card3d">
+									<div class="card3d_item"></div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card3d">
+									<div class="card3d_item"></div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card3d">
+									<div class="card3d_item"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /grid&card3d-->
+					<!-- scrollbar-->
+					<div class="scrollbar-inner" id="scrollbar">
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores temporibus laborum quidem explicabo, voluptatibus eum dolores ratione illo repellat provident. Ipsam, sed vel, tempore accusantium atque ex architecto voluptatum sunt ullam quidem nostrum odit accusamus, consequuntur optio!</p>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores temporibus laborum quidem explicabo, voluptatibus eum dolores ratione illo repellat provident. Ipsam, sed vel, tempore accusantium atque ex architecto voluptatum sunt ullam quidem nostrum odit accusamus, consequuntur optio! Corporis non saepe dolore voluptas deleniti, corrupti unde quisquam sequi delectus iusto architecto error qui accusantium reiciendis obcaecati. Id, itaque, minus. Quae, eius. Veritatis molestiae ducimus rerum voluptatibus illo magni ab ullam possimus earum, eveniet sunt soluta quibusdam, voluptate maiores asperiores repellat dolores impedit vitae libero adipisci quaerat minus. Reprehenderit facilis, vitae voluptates, itaque rerum repellat dolorum, optio aspernatur at suscipit necessitatibus debitis.</p>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores temporibus laborum quidem explicabo, voluptatibus eum dolores ratione illo repellat provident. Ipsam, sed vel, tempore accusantium atque ex architecto voluptatum sunt ullam quidem nostrum odit accusamus, consequuntur optio! Corporis non saepe dolore voluptas deleniti, corrupti unde quisquam sequi delectus iusto architecto error qui accusantium reiciendis obcaecati. Id, itaque, minus. Quae, eius. Veritatis molestiae ducimus rerum voluptatibus illo magni ab ullam possimus earum, eveniet sunt soluta quibusdam, voluptate maiores asperiores repellat dolores impedit vitae libero adipisci quaerat minus. Reprehenderit facilis, vitae voluptates, itaque rerum repellat dolorum, optio aspernatur at suscipit necessitatibus debitis.</p>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores temporibus laborum quidem explicabo, voluptatibus eum dolores ratione illo repellat provident. Ipsam, sed vel, tempore accusantium atque ex architecto voluptatum sunt ullam quidem nostrum odit accusamus, consequuntur optio! Corporis non saepe dolore voluptas deleniti, corrupti unde quisquam sequi delectus iusto architecto error qui accusantium reiciendis obcaecati. Id, itaque, minus. Quae, eius. Veritatis molestiae ducimus rerum voluptatibus illo magni ab ullam possimus earum, eveniet sunt soluta quibusdam, voluptate maiores asperiores repellat dolores impedit vitae libero adipisci quaerat minus. Reprehenderit facilis, vitae voluptates, itaque rerum repellat dolorum, optio aspernatur at suscipit necessitatibus debitis.</p>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores temporibus laborum quidem explicabo, voluptatibus eum dolores ratione illo repellat provident. Ipsam, sed vel, tempore accusantium atque ex architecto voluptatum sunt ullam quidem nostrum odit accusamus, consequuntur optio! Corporis non saepe dolore voluptas deleniti, corrupti unde quisquam sequi delectus iusto architecto error qui accusantium reiciendis obcaecati. Id, itaque, minus. Quae, eius. Veritatis molestiae ducimus rerum voluptatibus illo magni ab ullam possimus earum, eveniet sunt soluta quibusdam, voluptate maiores asperiores repellat dolores impedit vitae libero adipisci quaerat minus. Reprehenderit facilis, vitae voluptates, itaque rerum repellat dolorum, optio aspernatur at suscipit necessitatibus debitis.</p>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores temporibus laborum quidem explicabo, voluptatibus eum dolores ratione illo repellat provident. Ipsam, sed vel, tempore accusantium atque ex architecto voluptatum sunt ullam quidem nostrum odit accusamus, consequuntur optio! Corporis non saepe dolore voluptas deleniti, corrupti unde quisquam sequi delectus iusto architecto error qui accusantium reiciendis obcaecati. Id, itaque, minus. Quae, eius. Veritatis molestiae ducimus rerum voluptatibus illo magni ab ullam possimus earum, eveniet sunt soluta quibusdam, voluptate maiores asperiores repellat dolores impedit vitae libero adipisci quaerat minus. Reprehenderit facilis, vitae voluptates, itaque rerum repellat dolorum, optio aspernatur at suscipit necessitatibus debitis.</p>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores temporibus laborum quidem explicabo, voluptatibus eum dolores ratione illo repellat provident. Ipsam, sed vel, tempore accusantium atque ex architecto voluptatum sunt ullam quidem nostrum odit accusamus, consequuntur optio! Corporis non saepe dolore voluptas deleniti, corrupti unde quisquam sequi delectus iusto architecto error qui accusantium reiciendis obcaecati. Id, itaque, minus. Quae, eius. Veritatis molestiae ducimus rerum voluptatibus illo magni ab ullam possimus earum, eveniet sunt soluta quibusdam, voluptate maiores asperiores repellat dolores impedit vitae libero adipisci quaerat minus. Reprehenderit facilis, vitae voluptates, itaque rerum repellat dolorum, optio aspernatur at suscipit necessitatibus debitis.</p>
+					</div>
+					<!-- /scroll-->
+					<!-- count-number-->
+					<div class="count-number" data-val-up="0" data-val-to="3000" data-duration="3000"></div>
+					<!-- /count-number-->
+					<!-- tabs-->
+					<div id="tabs">
+						<ul id="tabs_triggers">
+							<li class="active">tab 1</li>
+							<li>tab 2</li>
+							<li>tab 3</li>
+						</ul>
+						<div id="tabs_content">
+							<div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda quod fugit, eos dolorem ut ex inventore facere non sit. Dolorum, eveniet, adipisci! Aperiam soluta, harum obcaecati earum optio libero reprehenderit, fuga. Libero odio eaque deserunt recusandae, maxime quaerat autem! Eligendi inventore laudantium odit magni nihil eos soluta quisquam, unde.</p>
+							</div>
+							<div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda quod fugit, eos dolorem ut ex inventore facere non sit.</p>
+							</div>
+							<div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda quod fugit, eos dolorem ut ex inventore facere non sit. Dolorum, eveniet, adipisci! Aperiam soluta, harum obcaecati earum optio libero reprehenderit, fuga. Libero odio eaque deserunt recusandae, maxime quaerat autem! Eligendi inventore laudantium odit magni nihil eos soluta quisquam, unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus officia, aliquam, nemo est unde nesciunt ipsam iure numquam natus error!</p>
+							</div>
+						</div>
+					</div>
+					<!-- /tabs-->
+					<!-- accordeon-->
+					<div id="accordeon">
+						<div class="accordeon_item">
+							<div class="accordeon_trigger">triger 1</div>
+							<div class="accordeon_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+						</div>
+						<div class="accordeon_item">
+							<div class="accordeon_trigger">triger 1</div>
+							<div class="accordeon_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+						</div>
+						<div class="accordeon_item">
+							<div class="accordeon_trigger">triger 1</div>
+							<div class="accordeon_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+						</div>
+					</div>
+					<!-- /accordeon-->
+					<!-- modal-->
+					<button class="modal-trigger" data-modal="#modal-1">Модалка 1</button>
+					<div class="modal" id="modal-1">
+						<div class="modal_body">
+							<div class="modal_content">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 1</p>
+								<div class="modal_close"></div>
+							</div>
+						</div>
+					</div>
+					<!-- /modal-->
+					<!-- modal-->
+					<button class="modal-trigger" data-modal="#modal-2">Модалка 2</button>
+					<div class="modal" id="modal-2">
+						<div class="modal_body">
+							<div class="modal_content">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem iusto asperiores, recusandae ducimus quis perspiciatis ad voluptatum, perferendis eligendi enim, veritatis facere. Similique aperiam, tempore quas odio, omnis repudiandae? 2</p>
+								<div class="modal_close"></div>
+							</div>
+						</div>
+					</div>
+					<!-- /modal-->
+					<!-- tooltip-->
+					<div class="expert-delete_item tooltip" data-tooltip-content="#tooltip1">
+						<p>Здесь всплывающая подсказка</p>
+					</div>
+					<div class="tooltip_templates">
+						<div id="tooltip1">
+							<p>Доступ эксперта к данной заявке будет прекращен, в случае если экспертиза завершена — она не будет учтена</p>
+						</div>
+					</div>
+					<!-- /tooltip-->
+					<!-- parallax-move-->
+					<div class="parallax-move" data-direction="xy" data-intensity="3" data-speed="100"></div>
+					<!-- /parallax-move-->
+					<!-- yandex-map-->
+					<div class="yandex-map" id="yandexMap" style="min-height: 300px;"></div>
+					<!-- /yandex-map-->
+					<!-- google-map-->
+					<div class="google-map" id="googleMap" style="min-height: 300px;"></div>
+					<!-- /google-map-->
+				</div>
+			</div>
+			<!-- footer-->
+			<footer class="footer">
+				<!-- footer-menu-->
+				<div class="footer-menu">
+					<div class="row"> 
+						<div class="footer-menu__col">
+							<nav class="footer-menu__nav">
+								<div class="footer-menu__title">Каталог</div>
+								<ul class="footer-menu__list"> 
+									<li><a href="#">Автономные кассы</a></li>
+									<li><a href="#">Фискальные регистраторы </a></li>
+									<li><a href="#">Смарт-терминалы</a></li>
+									<li><a href="#">Смарт-терминалы со встроенным эквайрингом</a></li>
+									<li><a href="#">POS оборудование</a></li>
+									<li><a href="#">Сканеры ШК</a></li>
+									<li><a href="#">Принтеры ШК</a></li>
+									<li><a href="#">Весы</a></li>
+									<li><a href="#">Кассы для интернет магазина</a></li>
+									<li><a href="#">Решения для бизнеса</a></li>
+									<li><a href="#">Программное обеспечение</a></li>
+									<li><a href="#">Маркировка</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-menu__col">
+							<div class="footer-menu__menu">
+								<div class="footer-menu__title">Решения для Вашего бизнеса</div>
+								<ul class="footer-menu__list">
+									<li><a href="#">Для интернет магазина</a></li>
+									<li><a href="#">Для магазина розничной торговли (мелкая розница, магазины у дома)</a></li>
+									<li><a href="#">Для магазина розничной торговли (минимаркеты)</a></li>
+									<li><a href="#">Для кафе/ресторанов</a></li>
+									<li><a href="#">Для закусочной (фастфуд)</a></li>
+									<li><a href="#">Для бара</a></li>
+									<li><a href="#">Для салона красоты</a></li>
+									<li><a href="#">Для автосервиса </a></li>
+									<li><a href="#">Для предоставления бытовых услуг</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-menu__col"> 
+							<div class="footer-menu__menu">
+								<div class="footer-menu__title">Услуги</div>
+								<ul class="footer-menu__list">
+									<li><a href="#">Ввод ККТ в эксплуатацию</a></li>
+									<li><a href="#">Сопровождение Вашей ККТ</a></li>
+									<li><a href="#">Программное обновление ККТ</a></li>
+									<li><a href="#">Ремонт</a></li>
+								</ul>
+							</div>
+							<div class="footer-menu__menu">
+								<div class="footer-menu__title">Партнерство</div>
+								<ul class="footer-menu__list">
+									<li><a href="#">Партнерство по кассовому оборудованию</a></li>
+									<li><a href="#">Партнерство по решениям для интернет магазинов</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-menu__col"> 
+							<div class="footer-menu__menu">
+								<div class="footer-menu__title">Мы в соцсетях</div>
+								<ul class="footer-menu__list">
+									<li><a href="#">Instagram</a></li>
+									<li><a href="#">Vkontakte</a></li>
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">WhatsApp</a></li>
+								</ul>
+							</div>
+							<div class="footer-menu__menu">
+								<div class="footer-menu__title">О компании</div>
+								<ul class="footer-menu__list">
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Экспертные статьи</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	/footer-menu-->
+				<!-- footer-bottom-->
+				<div class="footer-bottom">
+					<div class="footer-bottom__row"> 
+						<ul class="header-top__list header-top__list--orange-hover">
+							<li><span>2020 © ООО «Айтиком Маркет»</span></li>
+							<li><a href="#">Группа компании ITCOM</a></li>
+						</ul>
+						<ul class="header-top__list header-top__list--orange-hover">
+							<li><a href="#">Правила использольвания</a></li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Карта сайта</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--	/footer-bottom-->
+			</footer>
+			<!-- /footer-->
+		</div>
+		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

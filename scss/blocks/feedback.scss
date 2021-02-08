@@ -12,6 +12,14 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: -16px;
+    &--equal {
+      .btn {
+        flex-grow: 1;
+      }
+    }
+  }
+  &__col {
+    @include col(4);
   }
   &__input {
     flex-grow: 1;
@@ -25,6 +33,11 @@
   .btn {
     margin-left: 16px;
     margin-bottom: 16px;
+  }
+  &--catalog {
+    .title {
+      margin-bottom: 20px;
+    }
   }
   @media (max-width: $break_sm) {
     &__row {

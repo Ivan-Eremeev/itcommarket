@@ -22,9 +22,13 @@ block content
 		
 		main.content
 
-			ul.navPage
-				li
-					a(href="home.html") Главная
+			.navPage
+				.title Навигация по страницам
+				ul.navPage__list
+					li
+						a(href="home.html") Главная
+					li
+						a(href="catalog.html") Каталог
 			
 		include blocks/footer.jade
 

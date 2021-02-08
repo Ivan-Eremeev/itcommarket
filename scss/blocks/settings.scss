@@ -197,4 +197,36 @@ body {
     margin-left: auto;
   }
 }
+.navPage {
+  margin-bottom: 45px;
+  .title {
+    margin-bottom: 20px;
+  }
+  &__list {
+    font-size: 20px;
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: $black;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+.catalog-more-btn {
+  display: inline-block;
+  padding: 14px 88px 15px;
+  border: 1px solid $orange;
+  border-radius: 12px;
+  color: $orange;
+  cursor: pointer;
+  user-select: none;
+  transition: $trans;
+  &:hover {
+    color: $orangeHover;
+    border-color: $orangeHover;
+  }
+}
 /* /settings */

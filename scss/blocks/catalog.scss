@@ -1,0 +1,201 @@
+.catalog {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 24px 18px;
+    background-color: #F5F5F5;
+    border-radius: 24px;
+    margin-bottom: 24px;
+  }
+  &__checks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    padding-right: 16px;
+  }
+  &__check {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin: 3px 0 3px 16px;
+    user-select: none;
+    cursor: pointer;
+    transition: $trans;
+    &:hover {
+      color: $orange;
+      .catalog__check-cross {
+        fill: $orange;
+      }
+    }
+  }
+  &__check-cross {
+    fill: $gray;
+    transition: $trans;
+  }
+  &__check-span {
+    margin-left: 6px;
+  }
+  &__sort {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }  
+  &__select {
+    position: relative;
+    flex-shrink: 0;
+  }
+  &__select-btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 5px 24px;
+    background-color: #fff;
+    border-radius: 20px;
+    user-select: none;
+    cursor: pointer;
+    &:after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 6px;
+      margin-left: 40px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath id='ic_keyboard_arrow_down_24px' d='M7.175,7.84,11,11.549,14.825,7.84,16,8.982,11,13.84,6,8.982Z' transform='translate(-6 -7.84)' fill='%23e65100'/%3E%3C/svg%3E ");
+      transition: $trans;
+    }
+    &.active {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__select-btn-span {
+    color: $orange;
+    margin-left: 4px;
+  }
+  &__select-drop {
+    min-width: 100%;
+    padding-top: 8px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+    transform: translate(0, 50px);
+    visibility: hidden;
+    z-index: 2;
+    &.open {
+      opacity: 1;
+      transform: translate(0,0);
+      visibility: visible;
+    }
+  }
+  &__select-drop-container {
+    padding: 32px 32px 20px;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow:  $shadow;
+  }
+  &__select-drop-row {
+    display: flex;
+    margin-bottom: 12px;
+    input {
+      display: none;
+      &:checked {
+        +.catalog__select-drop-radio {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &__select-drop-radio {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 1px solid $orange;
+    border-radius: 100%;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+    &:after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: $orange;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      transition: $trans;
+    }
+    &:hover {
+      + .catalog__select-drop-text {
+        color: $orange;
+      }
+    }
+  }
+  &__select-drop-text {
+    transition: $trans;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      color: $orange;
+    }
+  }
+  &__view {
+    display: flex;
+  }
+  &__view-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    border-radius: 100%;
+    background-color: #fff;
+    cursor: pointer;
+    svg {
+      fill: $gray;
+      transition: $trans;
+    }
+    &:hover, &.active {
+      svg {
+        fill: $orange;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+  }
+  .row {
+    margin-bottom: 40px;
+  }
+  &__filters {
+    width: 304px;
+    flex-shrink: 0;
+  }
+  &__input {
+    position: relative;
+    input {
+      width: 100%;
+    }
+  }
+  &__cards {
+    flex-grow: 1;
+    padding-left: 16px;
+  }
+  &__col {
+    @include col(5.3);
+    margin-bottom: $gutter;
+  }
+  &__btn-more {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+}
