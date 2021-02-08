@@ -9,6 +9,49 @@
   span {
     display: block;
   }
+  &__stickers {
+    display: flex !important;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 33px;
+    left: 25px;
+    right: 33px;
+  }
+  &__sticker {
+    padding: 5px 10px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #fff;
+    &.stock {
+      background-color: #FE7200;
+    }
+    &.sale {
+      background-color: #E30510;
+    }
+    &.new {
+      background-color: #52CE00;
+    }
+    &.best {
+      background-color: #FFC000;
+    }
+    &.mark {
+      background-color: #B9D400;
+    }
+    &.sale-b {
+      background-color: #E30574;
+    }
+    &.choice {
+      background-color: #7D1A73;
+    }
+    &.credit {
+      background-color: #0080FF;
+    }
+    &.month {
+      background-color: #0033FF;
+    }
+  }
   &__img {
     height: 272px;
     background-color: $yellow;
@@ -32,11 +75,51 @@
     margin-bottom: 35px;
     transition: $trans;
   }
-  &__prices {
+  &__footer {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: flex-end;
     white-space: nowrap;
     position: absolute;
     left: 32px;
+    right: 32px;
     bottom: 30px;
+  }
+  &__prices {
+    
+  }
+  &__icons {
+    display: flex !important;
+    margin-right: -10px;
+    opacity: 0;
+    transition: $trans;
+  }
+  &__item {
+    width: 50px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+      .card__hover-text {
+        opacity: 1;
+      }
+      .card__icon {
+        svg {
+          fill: $orange;
+        }
+      }
+    }
+  }
+  &__hover-text {
+    margin-bottom: 5px;
+    color: $gray;
+    opacity: 0;
+    transition: $trans;
+  }
+  &__icon {
+    svg {
+      fill: $gray;
+    }
   }
   &__price-old {
     font-size: 16px;
@@ -58,6 +141,9 @@
     }
     .card__text {
       color: $orange;
+    }
+    .card__icons {
+      opacity: 1;
     }
   }
 }

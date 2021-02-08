@@ -347,33 +347,6 @@ body {
     .more-btn {
       margin-left: auto; } }
 
-.stock {
-  background-color: #FE7200; }
-
-.sale {
-  background-color: #E30510; }
-
-.new {
-  background-color: #52CE00; }
-
-.best {
-  background-color: #FFC000; }
-
-.mark {
-  background-color: #B9D400; }
-
-.sale-b {
-  background-color: #E30574; }
-
-.choice {
-  background-color: #7D1A73; }
-
-.credit {
-  background-color: #0080FF; }
-
-.month {
-  background-color: #0033FF; }
-
 /* /settings */
 /*!
  * Hamburgers
@@ -655,6 +628,7 @@ body {
       -ms-transform: translate(0, 0);
       transform: translate(0, 0); }
     .header-top__drop li {
+      padding: 2px 0;
       margin: 2px 0; }
     .header-top__drop a {
       display: block;
@@ -1017,6 +991,41 @@ body {
   color: #333; }
   .card span {
     display: block; }
+  .card__stickers {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 33px;
+    left: 25px;
+    right: 33px; }
+  .card__sticker {
+    padding: 5px 10px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #fff; }
+    .card__sticker.stock {
+      background-color: #FE7200; }
+    .card__sticker.sale {
+      background-color: #E30510; }
+    .card__sticker.new {
+      background-color: #52CE00; }
+    .card__sticker.best {
+      background-color: #FFC000; }
+    .card__sticker.mark {
+      background-color: #B9D400; }
+    .card__sticker.sale-b {
+      background-color: #E30574; }
+    .card__sticker.choice {
+      background-color: #7D1A73; }
+    .card__sticker.credit {
+      background-color: #0080FF; }
+    .card__sticker.month {
+      background-color: #0033FF; }
   .card__img {
     height: 272px;
     background-color: #FFE1A6;
@@ -1040,11 +1049,55 @@ body {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; }
-  .card__prices {
+  .card__footer {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     white-space: nowrap;
     position: absolute;
     left: 32px;
+    right: 32px;
     bottom: 30px; }
+  .card__icons {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin-right: -10px;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+  .card__item {
+    width: 50px;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .card__item:hover .card__hover-text {
+      opacity: 1; }
+    .card__item:hover .card__icon svg {
+      fill: #E65100; }
+  .card__hover-text {
+    margin-bottom: 5px;
+    color: #979797;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+  .card__icon svg {
+    fill: #979797; }
   .card__price-old {
     font-size: 16px;
     color: #979797;
@@ -1060,6 +1113,8 @@ body {
     transform: scale(1.1); }
   .card:hover .card__text {
     color: #E65100; }
+  .card:hover .card__icons {
+    opacity: 1; }
 
 .sales {
   margin-bottom: 35px; }

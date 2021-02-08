@@ -1,12 +1,29 @@
 mixin card()
   // card
   a(href="#").card
+    span.card__stickers
+      span.card__sticker.month Товар месяца
+      span.card__sticker.sale Скидка
     span.card__img
       img(src="", alt="")
     span.card__content 
       span.card__text Онлайн-касса Эвотор 5i без фискального накопителя
-      span.card__prices
-        span.card__price-old 22 800
-        span.card__price-new 20 300 
-          span ₽
+      span.card__footer
+        span.card__prices
+          span.card__price-old 22 800
+          span.card__price-new 20 300
+            span ₽
+        span.card__icons 
+          span.card__item
+            span.card__hover-text В сравнение
+            span.card__icon 
+              img(src="img/compare.svg", alt="")
+          span.card__item
+            span.card__hover-text В избранное
+            span.card__icon 
+              img(src="img/favorite.svg", alt="")
+          span.card__item
+            span.card__hover-text В корзину
+            span.card__icon 
+              img(src="img/cart.svg", alt="")
   //	/card
