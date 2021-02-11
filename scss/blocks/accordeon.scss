@@ -36,4 +36,9 @@
   &__filter-price {
     
   }
+  @media (max-width: $break_xs) {
+    &__trigger {
+      font-size: 16px;
+    }
+  }
 }

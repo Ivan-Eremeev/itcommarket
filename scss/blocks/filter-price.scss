@@ -24,4 +24,9 @@
       border-radius: 24px;
     }
   }
+  @media (max-width: $break_xs) {
+    &__title {
+      font-size: 16px;
+    }
+  }
 }

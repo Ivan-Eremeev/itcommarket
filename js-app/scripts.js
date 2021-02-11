@@ -35,26 +35,17 @@ $(document).ready(function () {
 						menuBtn = $this.find('#menu-btn'),
 						over = $this.find('#menu-over'),
 						close = $this.find('#menu-close');
-						// body = $('body'),
-						// scrollbarWidth;
 				menuBtn.on('click', toggleOpenMenu);
 				over.on('click', menuClose);
 				close.on('click', menuClose);
 				function menuOpen() { // Открывание меню
-					// body.addClass('lock').css('padding-right', scrollbarWidth);
 					$this.addClass('open');
 					menuBtn.addClass('is-active');
 				}
 				function menuClose() { // Закрывание меню
-					// body.removeClass('lock').css('padding-right', 0);
 					$this.removeClass('open');
 					menuBtn.removeClass('is-active');
 				}
-				// function scrollbarWidthCalc() { // Вычисление ширины скролла
-				// 	var documentWidth = parseInt(document.documentElement.clientWidth),
-				// 			windowsWidth = parseInt(window.innerWidth);
-				// 			scrollbarWidth = windowsWidth - documentWidth;
-				// }
 				function toggleOpenMenu() { // Открывание/закрывание меню
 					if ($this.hasClass('open')) {
 						menuClose();
@@ -62,8 +53,6 @@ $(document).ready(function () {
 						menuOpen();
 					}
 				}
-				// scrollbarWidthCalc();
-				// $(window).resize(scrollbarWidthCalc);
 			})
 		};
 	};

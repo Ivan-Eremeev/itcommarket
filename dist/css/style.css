@@ -918,13 +918,17 @@ body {
     .catalog-drop__content {
       padding: 34px; } }
   @media (max-width: 500px) {
-    .catalog-drop__row {
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-    .catalog-drop__col {
-      width: 100%; }
-    .catalog-drop__content {
-      padding: 20px 10px; } }
+    .catalog-drop {
+      width: auto;
+      left: -16px;
+      right: -16px; }
+      .catalog-drop__row {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+      .catalog-drop__col {
+        width: 100%; }
+      .catalog-drop__content {
+        padding: 20px 15px; } }
 
 .welcome {
   margin-bottom: 54px; }
@@ -2132,6 +2136,10 @@ body {
 .accordeon__drop {
   display: none; }
 
+@media (max-width: 500px) {
+  .accordeon__trigger {
+    font-size: 16px; } }
+
 .filter-price__title {
   font-size: 20px;
   margin-bottom: 16px; }
@@ -2158,3 +2166,7 @@ body {
     height: 48px;
     padding: 14px 50px 15px;
     border-radius: 24px; }
+
+@media (max-width: 500px) {
+  .filter-price__title {
+    font-size: 16px; } }
