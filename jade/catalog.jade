@@ -48,9 +48,9 @@ block content
 
 						.catalog__select
 
-							.catalog__select-btn.js-drop-click(data-id="#sortDrop")
-								| Сортировать
-								span.catalog__select-btn-span по популярности
+							.catalog__select-btn.js-select-sort(data-id="#sortDrop")
+								span Сортировать
+									span.catalog__select-btn-span по популярности
 							.catalog__select-drop#sortDrop
 								.catalog__select-drop-container
 									.catalog__select-drop-row
@@ -71,19 +71,124 @@ block content
 										label(for="select-sort_3").catalog__select-drop-text По наименованию
 
 						.catalog__view
-							.catalog__view-btn
+							.catalog__view-btn.catalog__view-btn--list
 								img(src="img/hamburger.svg", alt="")
-							.catalog__view-btn.active
+							.catalog__view-btn.catalog__view-btn--tiles.active
 								img(src="img/tile.svg", alt="")
 
 				.catalog__body
 
-					form(action="").catalog__filters
+					.catalog__menu.js-menu
 
-						.catalog__input
-							input#search_3(type="text" placeholder="Поиск по категории").input
-							label(for="search_3").header-center__zoom
-								img(src="img/zoom.svg", alt="")
+						#menu-btn.catalog__menu-btn Фильтры
+
+						form(action="").catalog__filters
+
+							.catalog__menu-close#menu-close
+
+							.catalog__input
+								input#search_3(type="text" placeholder="Поиск по категории").input
+								label(for="search_3").header-center__zoom
+									img(src="img/zoom.svg", alt="")
+									
+							// accordeon
+							.accordeon.js-accordeon
+
+								.accordeon__box 
+									.accordeon__trigger.js-accordeon-trigger Продуктовые категории
+									.accordeon__drop.js-accordeon-drop
+										.catalog__select-drop-container
+											
+											mixin accordeon-input(name, id, text, checked)
+												.catalog__select-drop-row
+													if checked
+														input( id= id type="radio" name= name checked)
+													else 
+														input( id= id type="radio" name= name)
+													label(for= id).catalog__select-drop-radio
+													label(for= id).catalog__select-drop-text= text
+
+											+accordeon-input('filter_category','filter_category_0', 'Автономные кассы', true)
+											+accordeon-input('filter_category','filter_category_1', 'Фискальные регистраторы')
+											+accordeon-input('filter_category','filter_category_2', 'Смарт терминалы')
+											+accordeon-input('filter_category','filter_category_3', 'Смарт терминалы с эквайрингом')
+											+accordeon-input('filter_category','filter_category_4', 'POS оборудование')
+											+accordeon-input('filter_category','filter_category_5', 'Сканеры ШК')
+
+								.accordeon__box 
+									.accordeon__trigger.js-accordeon-trigger Соответствие законодательству
+									.accordeon__drop.js-accordeon-drop
+										.catalog__select-drop-container
+											+accordeon-input('filter_legally','filter_legally_0', '54-ФЗ', true)
+											+accordeon-input('filter_legally','filter_legally_1', 'ЕГАИС')
+											+accordeon-input('filter_legally','filter_legally_2', 'Маркировка')
+
+								.accordeon__box 
+									.accordeon__trigger.js-accordeon-trigger Размер бизнеса
+									.accordeon__drop.js-accordeon-drop
+										.catalog__select-drop-container
+											+accordeon-input('filter_size', 'filter_size_0', 'Малый', true)
+											+accordeon-input('filter_size', 'filter_size_1', 'Средний')
+											+accordeon-input('filter_size', 'filter_size_2', 'Крупный')
+
+								.accordeon__box 
+									.accordeon__trigger.js-accordeon-trigger Сфера применения
+									.accordeon__drop.js-accordeon-drop
+										.catalog__select-drop-container
+											+accordeon-input('scope','scope_0', 'Интернет-магазин', true)
+											+accordeon-input('scope','scope_1', 'Магазин розничной торговли')
+											+accordeon-input('scope','scope_2', 'Минимаркет')
+											+accordeon-input('scope','scope_3', 'Кафе и ресторан')
+											+accordeon-input('scope','scope_4', 'Фастфуд')
+											+accordeon-input('scope','scope_5', 'Бар')
+											+accordeon-input('scope','scope_6', 'Салон красоты')
+											+accordeon-input('scope','scope_7', 'Автосервис')
+
+								.accordeon__box 
+									.accordeon__trigger.js-accordeon-trigger Услуги
+									.accordeon__drop.js-accordeon-drop
+										.catalog__select-drop-container
+											+accordeon-input('services','services_0', 'Аренда онлайн касс', true)
+											+accordeon-input('services','services_1', 'Услуги по настройке')
+											+accordeon-input('services','services_2', 'Сервис')
+
+								.accordeon__box 
+									.accordeon__trigger.js-accordeon-trigger Бренды
+									.accordeon__drop.js-accordeon-drop
+										.catalog__select-drop-container
+											+accordeon-input('brands','brands_0', 'Атол', true)
+											+accordeon-input('brands','brands_1', 'Эвотор')
+											+accordeon-input('brands','brands_2', 'Штрих М')
+											+accordeon-input('brands','brands_3', 'Дримкас')
+											+accordeon-input('brands','brands_4', 'МТС')
+
+								.accordeon__box 
+									.accordeon__trigger.js-accordeon-trigger Дополнительно
+									.accordeon__drop.js-accordeon-drop
+										.catalog__select-drop-container
+											+accordeon-input('more','more_0', 'Без ФН', true)
+											+accordeon-input('more','more_1', 'С ФН на 15 месяцев')
+											+accordeon-input('more','more_2', 'С ФН на 36 месяцев')
+
+								.accordeon__box 
+									.accordeon__trigger.js-accordeon-trigger Товар по акции
+									.accordeon__drop.js-accordeon-drop
+										.catalog__select-drop-container
+											+accordeon-input('sale','sale_0', 'Да', true)
+											+accordeon-input('sale','sale_1', 'Нет')
+							// /accordeon
+
+							// filter-price
+							.filter-price
+								.filter-price__title Стоимость
+								.filter-price__row
+									.filter-price__col
+										input(type="text" placeholder="От").filter-price__input.input
+									.filter-price__col
+										input(type="text" placeholder="До").filter-price__input.input
+								.filter-price__btn
+									button(type="submit").btn Применить фильтры
+							//	/filter-price
 
 					.catalog__cards
 						.row
@@ -125,6 +230,7 @@ block content
 								input(type="text" placeholder="Ваш email" name="email").feedback__input.input
 								.btn Отправить заявку
 						//	/feedback
+						
 			//	/catalog
 				
 		include blocks/footer.jade

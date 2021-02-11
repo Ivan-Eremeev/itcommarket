@@ -178,7 +178,7 @@
 						</div>
 						<form class="catalog__sort" action=""> 
 							<div class="catalog__select">
-								<div class="catalog__select-btn js-drop-click" data-id="#sortDrop">Сортировать<span class="catalog__select-btn-span">по популярности</span></div>
+								<div class="catalog__select-btn js-select-sort" data-id="#sortDrop"><span>Сортировать<span class="catalog__select-btn-span">по популярности</span></span></div>
 								<div class="catalog__select-drop" id="sortDrop">
 									<div class="catalog__select-drop-container">
 										<div class="catalog__select-drop-row">
@@ -205,66 +205,311 @@
 								</div>
 							</div>
 							<div class="catalog__view">
-								<div class="catalog__view-btn"><img src="img/hamburger.svg" alt=""></div>
-								<div class="catalog__view-btn active"><img src="img/tile.svg" alt=""></div>
+								<div class="catalog__view-btn catalog__view-btn--list"><img src="img/hamburger.svg" alt=""></div>
+								<div class="catalog__view-btn catalog__view-btn--tiles active"><img src="img/tile.svg" alt=""></div>
 							</div>
 						</form>
 					</div>
 					<div class="catalog__body">
-						<form class="catalog__filters" action="">
-							<div class="catalog__input">
-								<input class="input" id="search_3" type="text" placeholder="Поиск по категории">
-								<label class="header-center__zoom" for="search_3"><img src="img/zoom.svg" alt=""></label>
-							</div>
-						</form>
+						<div class="catalog__menu js-menu">
+							<div class="catalog__menu-btn" id="menu-btn">Фильтры</div>
+							<form class="catalog__filters" action="">
+								<div class="catalog__menu-close" id="menu-close"></div>
+								<div class="catalog__input">
+									<input class="input" id="search_3" type="text" placeholder="Поиск по категории">
+									<label class="header-center__zoom" for="search_3"><img src="img/zoom.svg" alt=""></label>
+								</div>
+								<!-- accordeon-->
+								<div class="accordeon js-accordeon">
+									<div class="accordeon__box"> 
+										<div class="accordeon__trigger js-accordeon-trigger">Продуктовые категории</div>
+										<div class="accordeon__drop js-accordeon-drop">
+											<div class="catalog__select-drop-container">
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_category_0" type="radio" name="filter_category" checked>
+																									<label class="catalog__select-drop-radio" for="filter_category_0"></label>
+																									<label class="catalog__select-drop-text" for="filter_category_0">Автономные кассы</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_category_1" type="radio" name="filter_category">
+																									<label class="catalog__select-drop-radio" for="filter_category_1"></label>
+																									<label class="catalog__select-drop-text" for="filter_category_1">Фискальные регистраторы</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_category_2" type="radio" name="filter_category">
+																									<label class="catalog__select-drop-radio" for="filter_category_2"></label>
+																									<label class="catalog__select-drop-text" for="filter_category_2">Смарт терминалы</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_category_3" type="radio" name="filter_category">
+																									<label class="catalog__select-drop-radio" for="filter_category_3"></label>
+																									<label class="catalog__select-drop-text" for="filter_category_3">Смарт терминалы с эквайрингом</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_category_4" type="radio" name="filter_category">
+																									<label class="catalog__select-drop-radio" for="filter_category_4"></label>
+																									<label class="catalog__select-drop-text" for="filter_category_4">POS оборудование</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_category_5" type="radio" name="filter_category">
+																									<label class="catalog__select-drop-radio" for="filter_category_5"></label>
+																									<label class="catalog__select-drop-text" for="filter_category_5">Сканеры ШК</label>
+																								</div>
+											</div>
+										</div>
+									</div>
+									<div class="accordeon__box"> 
+										<div class="accordeon__trigger js-accordeon-trigger">Соответствие законодательству</div>
+										<div class="accordeon__drop js-accordeon-drop">
+											<div class="catalog__select-drop-container">
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_legally_0" type="radio" name="filter_legally" checked>
+																									<label class="catalog__select-drop-radio" for="filter_legally_0"></label>
+																									<label class="catalog__select-drop-text" for="filter_legally_0">54-ФЗ</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_legally_1" type="radio" name="filter_legally">
+																									<label class="catalog__select-drop-radio" for="filter_legally_1"></label>
+																									<label class="catalog__select-drop-text" for="filter_legally_1">ЕГАИС</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_legally_2" type="radio" name="filter_legally">
+																									<label class="catalog__select-drop-radio" for="filter_legally_2"></label>
+																									<label class="catalog__select-drop-text" for="filter_legally_2">Маркировка</label>
+																								</div>
+											</div>
+										</div>
+									</div>
+									<div class="accordeon__box"> 
+										<div class="accordeon__trigger js-accordeon-trigger">Размер бизнеса</div>
+										<div class="accordeon__drop js-accordeon-drop">
+											<div class="catalog__select-drop-container">
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_size_0" type="radio" name="filter_size" checked>
+																									<label class="catalog__select-drop-radio" for="filter_size_0"></label>
+																									<label class="catalog__select-drop-text" for="filter_size_0">Малый</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_size_1" type="radio" name="filter_size">
+																									<label class="catalog__select-drop-radio" for="filter_size_1"></label>
+																									<label class="catalog__select-drop-text" for="filter_size_1">Средний</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="filter_size_2" type="radio" name="filter_size">
+																									<label class="catalog__select-drop-radio" for="filter_size_2"></label>
+																									<label class="catalog__select-drop-text" for="filter_size_2">Крупный</label>
+																								</div>
+											</div>
+										</div>
+									</div>
+									<div class="accordeon__box"> 
+										<div class="accordeon__trigger js-accordeon-trigger">Сфера применения</div>
+										<div class="accordeon__drop js-accordeon-drop">
+											<div class="catalog__select-drop-container">
+																								<div class="catalog__select-drop-row">
+																									<input id="scope_0" type="radio" name="scope" checked>
+																									<label class="catalog__select-drop-radio" for="scope_0"></label>
+																									<label class="catalog__select-drop-text" for="scope_0">Интернет-магазин</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="scope_1" type="radio" name="scope">
+																									<label class="catalog__select-drop-radio" for="scope_1"></label>
+																									<label class="catalog__select-drop-text" for="scope_1">Магазин розничной торговли</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="scope_2" type="radio" name="scope">
+																									<label class="catalog__select-drop-radio" for="scope_2"></label>
+																									<label class="catalog__select-drop-text" for="scope_2">Минимаркет</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="scope_3" type="radio" name="scope">
+																									<label class="catalog__select-drop-radio" for="scope_3"></label>
+																									<label class="catalog__select-drop-text" for="scope_3">Кафе и ресторан</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="scope_4" type="radio" name="scope">
+																									<label class="catalog__select-drop-radio" for="scope_4"></label>
+																									<label class="catalog__select-drop-text" for="scope_4">Фастфуд</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="scope_5" type="radio" name="scope">
+																									<label class="catalog__select-drop-radio" for="scope_5"></label>
+																									<label class="catalog__select-drop-text" for="scope_5">Бар</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="scope_6" type="radio" name="scope">
+																									<label class="catalog__select-drop-radio" for="scope_6"></label>
+																									<label class="catalog__select-drop-text" for="scope_6">Салон красоты</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="scope_7" type="radio" name="scope">
+																									<label class="catalog__select-drop-radio" for="scope_7"></label>
+																									<label class="catalog__select-drop-text" for="scope_7">Автосервис</label>
+																								</div>
+											</div>
+										</div>
+									</div>
+									<div class="accordeon__box"> 
+										<div class="accordeon__trigger js-accordeon-trigger">Услуги</div>
+										<div class="accordeon__drop js-accordeon-drop">
+											<div class="catalog__select-drop-container">
+																								<div class="catalog__select-drop-row">
+																									<input id="services_0" type="radio" name="services" checked>
+																									<label class="catalog__select-drop-radio" for="services_0"></label>
+																									<label class="catalog__select-drop-text" for="services_0">Аренда онлайн касс</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="services_1" type="radio" name="services">
+																									<label class="catalog__select-drop-radio" for="services_1"></label>
+																									<label class="catalog__select-drop-text" for="services_1">Услуги по настройке</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="services_2" type="radio" name="services">
+																									<label class="catalog__select-drop-radio" for="services_2"></label>
+																									<label class="catalog__select-drop-text" for="services_2">Сервис</label>
+																								</div>
+											</div>
+										</div>
+									</div>
+									<div class="accordeon__box"> 
+										<div class="accordeon__trigger js-accordeon-trigger">Бренды</div>
+										<div class="accordeon__drop js-accordeon-drop">
+											<div class="catalog__select-drop-container">
+																								<div class="catalog__select-drop-row">
+																									<input id="brands_0" type="radio" name="brands" checked>
+																									<label class="catalog__select-drop-radio" for="brands_0"></label>
+																									<label class="catalog__select-drop-text" for="brands_0">Атол</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="brands_1" type="radio" name="brands">
+																									<label class="catalog__select-drop-radio" for="brands_1"></label>
+																									<label class="catalog__select-drop-text" for="brands_1">Эвотор</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="brands_2" type="radio" name="brands">
+																									<label class="catalog__select-drop-radio" for="brands_2"></label>
+																									<label class="catalog__select-drop-text" for="brands_2">Штрих М</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="brands_3" type="radio" name="brands">
+																									<label class="catalog__select-drop-radio" for="brands_3"></label>
+																									<label class="catalog__select-drop-text" for="brands_3">Дримкас</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="brands_4" type="radio" name="brands">
+																									<label class="catalog__select-drop-radio" for="brands_4"></label>
+																									<label class="catalog__select-drop-text" for="brands_4">МТС</label>
+																								</div>
+											</div>
+										</div>
+									</div>
+									<div class="accordeon__box"> 
+										<div class="accordeon__trigger js-accordeon-trigger">Дополнительно</div>
+										<div class="accordeon__drop js-accordeon-drop">
+											<div class="catalog__select-drop-container">
+																								<div class="catalog__select-drop-row">
+																									<input id="more_0" type="radio" name="more" checked>
+																									<label class="catalog__select-drop-radio" for="more_0"></label>
+																									<label class="catalog__select-drop-text" for="more_0">Без ФН</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="more_1" type="radio" name="more">
+																									<label class="catalog__select-drop-radio" for="more_1"></label>
+																									<label class="catalog__select-drop-text" for="more_1">С ФН на 15 месяцев</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="more_2" type="radio" name="more">
+																									<label class="catalog__select-drop-radio" for="more_2"></label>
+																									<label class="catalog__select-drop-text" for="more_2">С ФН на 36 месяцев</label>
+																								</div>
+											</div>
+										</div>
+									</div>
+									<div class="accordeon__box"> 
+										<div class="accordeon__trigger js-accordeon-trigger">Товар по акции</div>
+										<div class="accordeon__drop js-accordeon-drop">
+											<div class="catalog__select-drop-container">
+																								<div class="catalog__select-drop-row">
+																									<input id="sale_0" type="radio" name="sale" checked>
+																									<label class="catalog__select-drop-radio" for="sale_0"></label>
+																									<label class="catalog__select-drop-text" for="sale_0">Да</label>
+																								</div>
+																								<div class="catalog__select-drop-row">
+																									<input id="sale_1" type="radio" name="sale">
+																									<label class="catalog__select-drop-radio" for="sale_1"></label>
+																									<label class="catalog__select-drop-text" for="sale_1">Нет</label>
+																								</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /accordeon-->
+								<!-- filter-price-->
+								<div class="filter-price">
+									<div class="filter-price__title">Стоимость</div>
+									<div class="filter-price__row">
+										<div class="filter-price__col">
+											<input class="filter-price__input input" type="text" placeholder="От">
+										</div>
+										<div class="filter-price__col">
+											<input class="filter-price__input input" type="text" placeholder="До">
+										</div>
+									</div>
+									<div class="filter-price__btn">
+										<button class="btn" type="submit">Применить фильтры</button>
+									</div>
+								</div>
+								<!--	/filter-price-->
+							</form>
+						</div>
 						<div class="catalog__cards">
 							<div class="row">
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 								<div class="catalog__col">
-									<!-- card--><a class="card" href="#"><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span><span class="card__img"><img src="" alt=""/></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
+									<!-- card--><a class="card" href="#"><span class="card__img"><img src="" alt=""/><span class="card__stickers"><span class="card__sticker month">Товар месяца</span><span class="card__sticker sale">Скидка</span></span></span><span class="card__content"> <span class="card__text">Онлайн-касса Эвотор 5i без фискального накопителя</span><span class="card__footer"><span class="card__prices"><span class="card__price-old">22 800</span><span class="card__price-new">20 300<span>₽</span></span></span><span class="card__icons"> <span class="card__item"><span class="card__hover-text">В сравнение</span><span class="card__icon"> <img src="img/compare.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В избранное</span><span class="card__icon"> <img src="img/favorite.svg" alt=""/></span></span><span class="card__item"><span class="card__hover-text">В корзину</span><span class="card__icon"> <img src="img/cart.svg" alt=""/></span></span></span></span></span></a>
 									<!--	/card-->
 								</div>
 							</div>

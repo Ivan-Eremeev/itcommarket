@@ -1,0 +1,39 @@
+.accordeon {
+  &__box {
+    margin-bottom: 16px;
+  }
+  &__trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+    &:after {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 10px;
+      height: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath id='ic_keyboard_arrow_down_24px' d='M7.175,7.84,11,11.549,14.825,7.84,16,8.982,11,13.84,6,8.982Z' transform='translate(-6 -7.84)' fill='%23e65100'/%3E%3C/svg%3E ");
+      transition: $trans;
+      transform: rotate(180deg);
+    }
+    &.active {
+      &:after {
+        transform: rotate(0);
+      }
+    }
+  }
+  &__drop {
+    display: none;
+    &.open {
+    }
+  }
+  &__filter-price {
+    
+  }
+}

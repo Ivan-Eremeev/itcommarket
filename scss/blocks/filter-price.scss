@@ -1,0 +1,27 @@
+.filter-price {
+  &__title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+  }
+  &__col {
+    width: 50%;
+    padding-left: 16px;
+    margin-bottom: 16px;
+  }
+  &__input {
+    width: 100%;
+  }
+  &__btn {
+    text-align: center;
+    .btn {
+      height: 48px;
+      padding: 14px 50px 15px;
+      border-radius: 24px;
+    }
+  }
+}

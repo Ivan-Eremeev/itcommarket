@@ -46,7 +46,9 @@
     flex-shrink: 0;
   }
   &__select-btn {
+    width: 280px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 40px;
     padding: 5px 24px;
@@ -54,12 +56,14 @@
     border-radius: 20px;
     user-select: none;
     cursor: pointer;
+    white-space: nowrap;
     &:after {
       content: '';
       display: block;
       width: 10px;
       height: 6px;
-      margin-left: 40px;
+      flex-shrink: 0;
+      margin-left: 10px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath id='ic_keyboard_arrow_down_24px' d='M7.175,7.84,11,11.549,14.825,7.84,16,8.982,11,13.84,6,8.982Z' transform='translate(-6 -7.84)' fill='%23e65100'/%3E%3C/svg%3E ");
       transition: $trans;
     }
@@ -164,7 +168,7 @@
       fill: $gray;
       transition: $trans;
     }
-    &:hover, &.active {
+    &.active {
       svg {
         fill: $orange;
       }
@@ -182,6 +186,7 @@
   }
   &__input {
     position: relative;
+    margin-bottom: 22px;
     input {
       width: 100%;
     }
@@ -189,13 +194,131 @@
   &__cards {
     flex-grow: 1;
     padding-left: 16px;
+    &--list {
+      .catalog__col {
+        @include col(16);
+      }
+    }
   }
   &__col {
     @include col(5.3);
+    @include col-lg(8);
+    @include col-xs(16);
     margin-bottom: $gutter;
   }
   &__btn-more {
     text-align: center;
     margin-bottom: 52px;
+  }
+  &__menu-btn {
+    display: none;
+  }
+  &__menu-close {
+    display: none;
+  }
+  &__menu-over {
+    display: none;
+  }
+  @media (max-width: $break_md) {
+    .catalog__body {
+      display: block;
+    }
+    .catalog__filters {
+      padding: 70px 30px;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 600px;
+      left: -1100px;
+      transition: 0.5s;
+      overflow-y: auto;
+      z-index: 10;
+    }
+    .catalog__menu {        
+      &.open {
+        .catalog__filters {
+          left: 0;
+        }
+      }
+    }
+    &__menu-btn {
+      display: inline-block;
+      padding-right: 20px;
+      font-size: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 6px;
+        flex-shrink: 0;
+        margin-left: 10px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath id='ic_keyboard_arrow_down_24px' d='M7.175,7.84,11,11.549,14.825,7.84,16,8.982,11,13.84,6,8.982Z' transform='translate(-6 -7.84)' fill='%23e65100'/%3E%3C/svg%3E ");
+        transition: $trans;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        transform: rotate(-90deg);
+      }
+      &:hover {
+        color: $orange;
+      }
+    }
+    &__menu-close {
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      &:after,&:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $orange;
+        position: absolute;
+        top: 50%;
+       left: 50%
+      }
+      &:after {
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+      &:before {
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
+    }
+    .catalog__cards {
+      padding-left: 0;
+    }
+  }
+  @media (max-width: $break_sm) {
+    .catalog__head {
+      justify-content: flex-end;
+    }
+    .catalog__checks {
+      display: none;
+    }
+  }
+  @media (max-width: $break_xs) {
+    .catalog__head {
+      padding: 10px;
+    }
+    .catalog__sort {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    .catalog__select {
+      width: 100%;
+    }
+    .catalog__select-btn {
+      width: 100%;
+    }
+    .catalog__view {
+      display: none;
+    }
   }
 }

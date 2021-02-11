@@ -1,5 +1,6 @@
 .card {
   display: block;
+  height: 100%;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: $shadow;
@@ -56,6 +57,7 @@
     height: 272px;
     background-color: $yellow;
     overflow: hidden;
+    position: relative;
     img {
       transition: 0.5s;
       width: 100%;
@@ -70,10 +72,12 @@
     padding: 26px 32px 75px;
   }
   &__text {
+    max-height: 90px;
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 35px;
     transition: $trans;
+    overflow: hidden;
   }
   &__footer {
     display: flex !important;
@@ -144,6 +148,58 @@
     }
     .card__icons {
       opacity: 1;
+    }
+  }
+  &--list {
+    display: flex;
+    .card__img {
+      flex-shrink: 0;
+      width: 32%;
+      height: auto;
+    }
+    .card__stickers {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+    }
+    .card__content {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+      align-items: center;
+      padding: 32px;
+    }
+    .card__text {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+    .card__footer {
+      display: flex;
+      align-items: center;
+      position: static;
+    }
+    .card__icons {
+      align-items: center;
+      margin-top: -20px;
+      margin-left: 50px;
+      margin-right: 0;
+    }
+  }
+  @media (max-width: $break_lg) {
+    &--list {
+      .card__content {
+        flex-wrap: wrap;
+      }
+      .card__text {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .card__icons {
+        margin-left: 10px;
+      }
+      .card__footer {
+        width: 100%;
+      }
     }
   }
 }

@@ -228,5 +228,9 @@ body {
     color: $orangeHover;
     border-color: $orangeHover;
   }
+  @media (max-width: $break_xs) {
+    width: 100%;
+    padding: 14px 20px 15px;
+  }
 }
 /* /settings */

@@ -9,4 +9,10 @@
   &__title {
     font-size: 32px;
   }
+  @media (max-width: $break_sm) {
+    padding: 30px;
+    &__title {
+      font-size: 24px;
+    }
+  }
 }
