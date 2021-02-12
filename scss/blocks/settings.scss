@@ -167,6 +167,9 @@ body {
   &--center {
     text-align: center;
   }
+  @media (max-width: $break_sm) {
+    font-size: 32px;
+  }
 }
 .title-flex {
   display: flex;

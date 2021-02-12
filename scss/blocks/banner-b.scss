@@ -7,12 +7,28 @@
   overflow: hidden;
   margin-bottom: 30px;
   &__title {
+    max-width: 650px;
     font-size: 32px;
+  }
+  &__text {
+    max-width: 650px;
+    font-size: 16px;
+  }
+  &--second {
+    padding: 80px 80px 40px;
+    margin-bottom: 16px;
+    .banner-b__title {
+      margin-bottom: 16px;
+    }
   }
   @media (max-width: $break_sm) {
     padding: 30px;
     &__title {
+      margin-bottom: 10px;
       font-size: 24px;
+    }
+    &--second {
+      padding: 30px 30px 20px;
     }
   }
 }

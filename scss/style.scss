@@ -40,7 +40,7 @@ $shadow: 0 10px 20px rgba(0,0,0,.1);
 
 // Подключение файлов
 @import 'blocks/settings';
-@import 'hamburgers/hamburgers';
+// @import 'hamburgers/hamburgers';
 @import 'blocks/menu';
 @import 'blocks/header-top';
 @import 'blocks/header-center';
@@ -68,5 +68,8 @@ $shadow: 0 10px 20px rgba(0,0,0,.1);
 @import 'blocks/catalog';
 @import 'blocks/accordeon';
 @import 'blocks/filter-price';
+@import 'blocks/grid-3col';
+@import 'blocks/grid-4col';
+@import 'blocks/grid-2col';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';

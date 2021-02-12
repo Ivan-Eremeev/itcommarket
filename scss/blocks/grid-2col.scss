@@ -1,0 +1,7 @@
+.grid-2col {
+  &__col {
+    @include col(8);
+    @include col-md(16);
+    margin-bottom: $gutter;
+  }
+}

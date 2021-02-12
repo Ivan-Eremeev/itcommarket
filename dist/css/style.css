@@ -307,6 +307,9 @@ body {
   color: #979797; }
   .title--center {
     text-align: center; }
+  @media (max-width: 769px) {
+    .title {
+      font-size: 32px; } }
 
 .title-flex {
   display: -webkit-box;
@@ -383,127 +386,6 @@ body {
       padding: 14px 20px 15px; } }
 
 /* /settings */
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
-.hamburger {
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-transition-property: opacity, -webkit-filter;
-  transition-property: opacity, -webkit-filter;
-  -o-transition-property: opacity, filter;
-  transition-property: opacity, filter;
-  transition-property: opacity, filter, -webkit-filter;
-  -webkit-transition-duration: 0.15s;
-  -o-transition-duration: 0.15s;
-  transition-duration: 0.15s;
-  -webkit-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible; }
-  .hamburger:hover {
-    opacity: 0.7; }
-  .hamburger.is-active:hover {
-    opacity: 0.7; }
-  .hamburger.is-active .hamburger-inner,
-  .hamburger.is-active .hamburger-inner::before,
-  .hamburger.is-active .hamburger-inner::after {
-    background-color: #000; }
-
-.hamburger-box {
-  width: 40px;
-  height: 24px;
-  display: inline-block;
-  position: relative; }
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px; }
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
-    background-color: #000;
-    border-radius: 4px;
-    position: absolute;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    -o-transition-property: transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 0.15s;
-    -o-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-    -webkit-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease; }
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
-    display: block; }
-  .hamburger-inner::before {
-    top: -10px; }
-  .hamburger-inner::after {
-    bottom: -10px; }
-
-/*
-   * Squeeze
-   */
-.hamburger--squeeze .hamburger-inner {
-  -webkit-transition-duration: 0.075s;
-  -o-transition-duration: 0.075s;
-  transition-duration: 0.075s;
-  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -o-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    -o-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
-  .hamburger--squeeze .hamburger-inner::after {
-    -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -o-transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-
-.hamburger--squeeze.is-active .hamburger-inner {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transition-delay: 0.12s;
-  -o-transition-delay: 0.12s;
-  transition-delay: 0.12s;
-  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .hamburger--squeeze.is-active .hamburger-inner::before {
-    top: 0;
-    opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    -o-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
-  .hamburger--squeeze.is-active .hamburger-inner::after {
-    bottom: 0;
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    -webkit-transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-    -o-transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
 .menu {
   position: relative; }
   .menu__nav {
@@ -1544,14 +1426,14 @@ body {
     transition: 0.3s; }
   @media (max-width: 769px) {
     .selection__title {
-      font-size: 40px; }
+      font-size: 32px; }
     .selection__form .btn {
       width: 100%; }
     .selection__select {
       width: 100%; } }
   @media (max-width: 500px) {
     .selection {
-      padding: 30px; } }
+      padding: 30px 16px; } }
 
 .articles {
   margin-bottom: 45px; }
@@ -1567,6 +1449,7 @@ body {
 
 .article {
   display: block;
+  height: 100%;
   border-radius: 24px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -1609,6 +1492,30 @@ body {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1); }
+  .article__list {
+    padding-left: 10px; }
+  .article__item {
+    font-size: 16px;
+    line-height: 1.38;
+    position: relative; }
+    .article__item:after {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      background-color: #333;
+      border-radius: 100%;
+      position: absolute;
+      top: 8px;
+      left: -10px; }
+  .article--second .article__content {
+    padding: 32px 32px 16px; }
+  .article--second .article__title {
+    max-height: none;
+    font-size: 20px;
+    margin-bottom: 16px; }
+  .article--second .article__list {
+    margin-bottom: 16px; }
 
 .feedback {
   margin-bottom: 30px; }
@@ -1719,12 +1626,24 @@ body {
   overflow: hidden;
   margin-bottom: 30px; }
   .banner-b__title {
+    max-width: 650px;
     font-size: 32px; }
+  .banner-b__text {
+    max-width: 650px;
+    font-size: 16px; }
+  .banner-b--second {
+    padding: 80px 80px 40px;
+    margin-bottom: 16px; }
+    .banner-b--second .banner-b__title {
+      margin-bottom: 16px; }
   @media (max-width: 769px) {
     .banner-b {
       padding: 30px; }
       .banner-b__title {
-        font-size: 24px; } }
+        margin-bottom: 10px;
+        font-size: 24px; }
+      .banner-b--second {
+        padding: 30px 30px 20px; } }
 
 .catalog__head {
   display: -webkit-box;
@@ -2170,3 +2089,34 @@ body {
 @media (max-width: 500px) {
   .filter-price__title {
     font-size: 16px; } }
+
+.grid-3col {
+  margin-bottom: 40px; }
+  .grid-3col__col {
+    width: 33.125%;
+    margin-bottom: 16px; }
+    @media screen and (max-width: 1050px) {
+      .grid-3col__col {
+        width: 50%; } }
+    @media screen and (max-width: 500px) {
+      .grid-3col__col {
+        width: 100%; } }
+
+.grid-4col {
+  margin-bottom: 48px; }
+  .grid-4col__col {
+    width: 25%;
+    margin-bottom: 16px; }
+    @media screen and (max-width: 1050px) {
+      .grid-4col__col {
+        width: 50%; } }
+    @media screen and (max-width: 500px) {
+      .grid-4col__col {
+        width: 100%; } }
+
+.grid-2col__col {
+  width: 50%;
+  margin-bottom: 16px; }
+  @media screen and (max-width: 1050px) {
+    .grid-2col__col {
+      width: 100%; } }

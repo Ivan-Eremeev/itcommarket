@@ -1,0 +1,9 @@
+.grid-3col {
+  margin-bottom: 40px;
+  &__col {
+    @include col(5.3);
+    @include col-md(8);
+    @include col-xs(16);
+    margin-bottom: $gutter;
+  }
+}
