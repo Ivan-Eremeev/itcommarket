@@ -1666,6 +1666,7 @@ body.lock {
 
 .selection__title {
   font-size: 48px;
+  font-weight: normal;
   margin-bottom: 15px;
 }
 

@@ -1,0 +1,126 @@
+extends blocks/base.jade
+
+block title 
+	title Главная
+
+block style-libs
+
+include blocks/article_2.jade
+
+block content
+
+	.page.wrapper
+
+		include blocks/header.jade
+		
+		main.content
+
+			// banner-b
+			.banner-b.banner-b--second
+				.banner-b__title
+					p Размер бизнеса
+				.banner-b__text
+					p В этом разделе оборудование и ПО разделены по группам в зависимости от размера вашей компании. Малый, средний или крупный бизнес – вы найдете то, что нужно именно вам.
+			//	/banner-b
+
+			// grid-3col
+			.grid-3col
+				.row 
+					.grid-3col__col
+						+article_2('Малый')
+					.grid-3col__col
+						+article_2('Средний')
+					.grid-3col__col
+						+article_2('Большой')
+						
+			//	/grid-3col
+
+			// selection
+			.selection
+				h2.selection__title Подбор кассы по параметрам
+				.selection__text Подбор онлайн-кассы от ITCOM Market среди 3000 моделей специально для вас
+				form(action="#").selection__form
+
+					.selection__select.input Вид деятельности
+						.selection__drop 
+							ul.selection__list
+								li
+									input(type="checkbox")#business_0
+									label(for="business_0").selection__checkbox
+									label(for="business_0").selection__label-text Аптека
+								li
+									input(type="checkbox")#business_1
+									label(for="business_1").selection__checkbox
+									label(for="business_1").selection__label-text Кафе/бар/ресторан
+								li
+									input(type="checkbox")#business_2
+									label(for="business_2").selection__checkbox
+									label(for="business_2").selection__label-text Курьерские услуги
+								li
+									input(type="checkbox")#business_3
+									label(for="business_3").selection__checkbox
+									label(for="business_3").selection__label-text Магазин у дома
+								li
+									input(type="checkbox")#business_4
+									label(for="business_4").selection__checkbox
+									label(for="business_4").selection__label-text Салоны красоты/медцентры
+								li
+									input(type="checkbox")#business_5
+									label(for="business_5").selection__checkbox
+									label(for="business_5").selection__label-text Транспорт
+								li
+									input(type="checkbox")#business_6
+									label(for="business_6").selection__checkbox
+									label(for="business_6").selection__label-text Услуги
+
+					.selection__select.input Характер работы
+						.selection__drop 
+							ul.selection__list
+								li
+									input(type="checkbox")#character_0
+									label(for="character_0").selection__checkbox
+									label(for="character_0").selection__label-text Разъездной
+								li
+									input(type="checkbox")#character_1
+									label(for="character_1").selection__checkbox
+									label(for="character_1").selection__label-text Смешанный
+								li
+									input(type="checkbox")#character_2
+									label(for="character_2").selection__checkbox
+									label(for="character_2").selection__label-text Стационарный
+
+					.selection__select.input Ценовой сегмент
+						.selection__drop 
+							ul.selection__list
+								li
+									input(type="checkbox")#segment_0
+									label(for="segment_0").selection__checkbox
+									label(for="segment_0").selection__label-text Высокий
+								li
+									input(type="checkbox")#segment_1
+									label(for="segment_1").selection__checkbox
+									label(for="segment_1").selection__label-text Низкий
+								li
+									input(type="checkbox")#segment_2
+									label(for="segment_2").selection__checkbox
+									label(for="segment_2").selection__label-text Средний
+
+					button(type="submit").btn Подобрать кассу
+			//	/selection
+
+			// feedback
+			form(action="").feedback
+				h2.title.title--center Затрудняетесь с подбором кассовой техники?
+				.feedback__text Ответьте на пару вопросов, мы предложим вам оптимальное решение!
+				.feedback__row 
+					input(type="text" placeholder="Сфера вашего бизнеса" name="name").feedback__input.input
+					input(type="text" placeholder="Есть ли у вас кассовое оборудование" name="message").feedback__input.input
+					input(type="text" placeholder="Ваш email" name="email").feedback__input.feedback__input--maw.input
+					input(type="text" placeholder="Номер телефона" name="tel").feedback__input.feedback__input--maw.input
+					.btn Отправить заявку
+			//	/feedback
+				
+		include blocks/footer.jade
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
