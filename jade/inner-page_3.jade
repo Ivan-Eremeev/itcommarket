@@ -1,11 +1,11 @@
 extends blocks/base.jade
 
 block title 
-	title Главная
+	title Внутренняя страница
 
 block style-libs
 
-include blocks/article_2.jade
+include blocks/article_3.jade
 
 block content
 
@@ -23,19 +23,19 @@ block content
 					p В этом каталоге вы найдете широкий выбор оборудования и ПО для автоматизации бизнеса. Все представленные продукты соответствуют высоким стандартам качества и зарекомендовали себя как надежные и эффективные решения.
 			//	/banner-b
 
-			// grid-4col
-			.grid-4col
-				.row 
-					.grid-4col__col
-						+article_2('Автономные кассы')
-					.grid-4col__col
-						+article_2('Фискальные регистраторы')
-					.grid-4col__col
-						+article_2('Смарт терминалы')
-					.grid-4col__col
-						+article_2('Терминалы с эквайрингом')
-						
-			//	/grid-4col
+			// grid-list
+			.grid-list
+				.row
+					.grid-list__col
+						+article_3('Автономные кассы')
+					.grid-list__col
+						+article_3('Фискальные регистраторы')
+					.grid-list__col
+						+article_3('Смарт терминалы')
+					.grid-list__col
+						+article_3('Терминалы с эквайрингом')
+					.grid-list__col
+				//	/grid-list
 
 			// selection
 			.selection
@@ -107,18 +107,21 @@ block content
 									label(for="segment_2").selection__checkbox
 									label(for="segment_2").selection__label-text Средний
 
+					.selection__input
+						input(type="text" placeholder="Имя" name="name").input
+					.selection__input
+						input(type="text" placeholder="Телефон" name="tel").input
+
 					button(type="submit").btn Подобрать кассу
 			//	/selection
 
 			// feedback
 			form(action="").feedback
 				h2.title.title--center Затрудняетесь с подбором кассовой техники?
-				.feedback__text Ответьте на пару вопросов, мы предложим вам оптимальное решение!
+				.feedback__text Мы предложим вам оптимальное решение!
 				.feedback__row 
-					input(type="text" placeholder="Сфера вашего бизнеса" name="name").feedback__input.input
-					input(type="text" placeholder="Есть ли у вас кассовое оборудование" name="message").feedback__input.input
-					input(type="text" placeholder="Ваш email" name="email").feedback__input.feedback__input--maw.input
-					input(type="text" placeholder="Номер телефона" name="tel").feedback__input.feedback__input--maw.input
+					input(type="text" placeholder="Имя" name="name").feedback__input.feedback__input--maw.input
+					input(type="text" placeholder="Телефон" name="tel").feedback__input.feedback__input--maw.input
 					.btn Отправить заявку
 			//	/feedback
 				

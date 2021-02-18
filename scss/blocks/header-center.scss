@@ -92,6 +92,17 @@
     }
     &__list {
       flex-wrap: wrap;
+      li {
+        margin: 0 10px 20px;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__list {
+      font-size: 12px;
+      li {
+        margin: 0 5px 20px;
+      }
     }
   }
 }

@@ -10,6 +10,7 @@
   }
   &__row {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-left: -16px;
     &--equal {

@@ -1,12 +1,14 @@
 .card {
   display: block;
   height: 100%;
+  border: 1px solid transparent;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: $shadow;
   background-color: #fff;
   position: relative;
   color: $black;
+  transition: 0.5s;
   span {
     display: block;
   }
@@ -185,6 +187,10 @@
       margin-right: 0;
     }
   }
+  &:hover {
+    border-color: #e6e6e6;
+    box-shadow: none;
+  }
   @media (max-width: $break_lg) {
     &--list {
       .card__content {
@@ -199,6 +205,17 @@
       }
       .card__footer {
         width: 100%;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    &--list {
+      width: 600px;
+      overflow: visible;
+      .card__img {
+        width: 40%;
+        border-radius: 24px 0 0 24px;
+        overflow: hidden;
       }
     }
   }

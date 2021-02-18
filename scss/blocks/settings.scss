@@ -193,6 +193,7 @@ body {
   transition: $trans;
   user-select: none;
   white-space: nowrap;
+  text-align: center;
   &:hover {
     background-color: #F5F5F5;
   }

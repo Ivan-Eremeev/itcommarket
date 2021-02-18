@@ -67,7 +67,9 @@ block content
 
 			// sales
 			.sales
-				h2.title.title--center Актуальные акции
+				.title-flex
+					h2.title Актуальные акции
+					a(href="#").more-btn Все акции
 				.row 
 					.sales__col
 						+item('При покупке кассы в ITCOM Market','Электронная подпись со скидкой 30%')
@@ -77,6 +79,7 @@ block content
 						+item('Хотите узнать больше, как','Купить в рассрочку онлайн-кассу')
 					.sales__col
 						+item('При заказе от 5-ти касс Эвотор','Установка и настройка кассы в подарок')
+				a(href="#").more-btn Показать еще
 			//	/sales
 
 			// services
@@ -101,6 +104,7 @@ block content
 						+icon('Салон красоты')
 					.services__col
 						+icon('Автосервис')
+				a(href="#").more-btn Показать еще
 			//	/services
 
 			// services
@@ -117,6 +121,7 @@ block content
 						+item('Услуга','Программное обновление ККТ')
 					.services__col
 						+item('Услуга','Ремонт ККТ')
+				a(href="#").more-btn Показать еще
 			//	/services
 
 			// popular
@@ -306,6 +311,11 @@ block content
 									label(for="segment_2").selection__checkbox
 									label(for="segment_2").selection__label-text Средний
 
+					.selection__input
+						input(type="text" placeholder="Имя" name="name").input
+					.selection__input
+						input(type="text" placeholder="Телефон" name="tel").input
+
 					button(type="submit").btn Подобрать кассу
 			//	/selection
 
@@ -323,17 +333,16 @@ block content
 						+article
 					.articles__col 
 						+article
+				a(href="#").more-btn Показать еще
 			//	/articles
 
 			// feedback
 			form(action="").feedback
 				h2.title.title--center Затрудняетесь с подбором кассовой техники?
-				.feedback__text Ответьте на пару вопросов, мы предложим вам оптимальное решение!
+				.feedback__text Мы предложим вам оптимальное решение!
 				.feedback__row 
-					input(type="text" placeholder="Сфера вашего бизнеса" name="name").feedback__input.input
-					input(type="text" placeholder="Есть ли у вас кассовое оборудование" name="message").feedback__input.input
-					input(type="text" placeholder="Ваш email" name="email").feedback__input.feedback__input--maw.input
-					input(type="text" placeholder="Номер телефона" name="tel").feedback__input.feedback__input--maw.input
+					input(type="text" placeholder="Имя" name="name").feedback__input.feedback__input--maw.input
+					input(type="text" placeholder="Телефон" name="tel").feedback__input.feedback__input--maw.input
 					.btn Отправить заявку
 			//	/feedback
 				

@@ -24,7 +24,7 @@
     }
   }
   &__select {
-    width: 207px;
+    flex-grow: 1;
     padding: 14px 35px 15px 16px;
     margin-bottom: 10px;
     margin-left: 16px;
@@ -54,6 +54,15 @@
       .selection__list {
         border-color: $orange;
       }
+    }
+  }
+  &__input {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    margin-left: 16px;
+    input {
+      width: 100%;
+      padding-left: 14px;
     }
   }
   &__drop {
@@ -125,6 +134,9 @@
       }
     }
     &__select {
+      width: 100%;
+    }
+    &__input {
       width: 100%;
     }
   }

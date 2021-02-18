@@ -1,0 +1,6 @@
+.grid-list {
+  &__col {
+    @include col(16);
+    margin-bottom: $gutter;
+  }
+}

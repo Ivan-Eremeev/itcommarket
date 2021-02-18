@@ -268,14 +268,14 @@ $(document).ready(function () {
 				card.removeClass('card--list');
 			}
 		});
-		$(window).resize(function () {
-			if ($(window).width() < breakXs) {
-				catalogCards.removeClass('catalog__cards--list');
-				card.removeClass('card--list');
-				btn.removeClass('active');
-				$('.catalog__view-btn--tiles').addClass('active');
-			}
-		});
+		// $(window).resize(function () {
+		// 	if ($(window).width() < breakXs) {
+		// 		catalogCards.removeClass('catalog__cards--list');
+		// 		card.removeClass('card--list');
+		// 		btn.removeClass('active');
+		// 		$('.catalog__view-btn--tiles').addClass('active');
+		// 	}
+		// });
 	}
 	viewCatalog();
 

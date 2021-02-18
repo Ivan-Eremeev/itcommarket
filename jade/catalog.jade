@@ -1,7 +1,7 @@
 extends blocks/base.jade
 
 block title 
-	title Главная
+	title Каталог
 
 block style-libs
 
@@ -212,13 +212,12 @@ block content
 							a(href="#").catalog-more-btn Показать еще товары
 
 						// feedback
-						form(action="").feedback.feedback--catalog
-							h2.title.title--center Поможем в выборе
-							.feedback__text Подберем оптимальный пакет оборудования прямо сейчас
-							.feedback__row.feedback__row--equal
-								input(type="text" placeholder="Ваше имя" name="name").feedback__input.input
-								input(type="tel" placeholder="Номер телефона" name="tel").feedback__input.input
-								input(type="text" placeholder="Ваш email" name="email").feedback__input.input
+						form(action="").feedback
+							h2.title.title--center Затрудняетесь с подбором кассовой техники?
+							.feedback__text Мы предложим вам оптимальное решение!
+							.feedback__row 
+								input(type="text" placeholder="Имя" name="name").feedback__input.feedback__input--maw.input
+								input(type="text" placeholder="Телефон" name="tel").feedback__input.feedback__input--maw.input
 								.btn Отправить заявку
 						//	/feedback
 						
