@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 24px;
-  background-color: $black;
+  background-color: $orange;
   border-radius: 0 0 12px 12px;
   &__menu {
     margin-right: 24px;
@@ -22,14 +22,14 @@
     a {
       color: #fff;
       &.active {
-        color: $orange;
+        color: #cbcbcb;
       }
     }
     &--gray-hover {
       a {
         &:not(.active) {
             &:hover {
-            color: #979797;
+            color: #cbcbcb;
           }
         }
       }
@@ -49,14 +49,15 @@
     transition: $trans;
     user-select: none;
     &:hover, &.active {
-      color: $orange;
+      color: #cbcbcb;
     }
     &:before {
       content: '';
       display: block;
       width: 11px;
       height: 16px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='16' viewBox='0 0 11 16'%3E%3Cpath id='ic_place_24px' d='M10.5,2A5.547,5.547,0,0,0,5,7.6C5,11.8,10.5,18,10.5,18S16,11.8,16,7.6A5.547,5.547,0,0,0,10.5,2Zm0,7.6a2,2,0,1,1,1.964-2A1.983,1.983,0,0,1,10.5,9.6Z' transform='translate(-5 -2)' fill='%23979797'/%3E%3C/svg%3E ");
+      // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='16' viewBox='0 0 11 16'%3E%3Cpath id='ic_place_24px' d='M10.5,2A5.547,5.547,0,0,0,5,7.6C5,11.8,10.5,18,10.5,18S16,11.8,16,7.6A5.547,5.547,0,0,0,10.5,2Zm0,7.6a2,2,0,1,1,1.964-2A1.983,1.983,0,0,1,10.5,9.6Z' transform='translate(-5 -2)' fill='%23979797'/%3E%3C/svg%3E ");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='16' viewBox='0 0 11 16'%3E%3Cpath id='ic_place_24px' d='M10.5,2A5.547,5.547,0,0,0,5,7.6C5,11.8,10.5,18,10.5,18S16,11.8,16,7.6A5.547,5.547,0,0,0,10.5,2Zm0,7.6a2,2,0,1,1,1.964-2A1.983,1.983,0,0,1,10.5,9.6Z' transform='translate(-5 -2)' fill='%23ffffff'/%3E%3C/svg%3E%0A");
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
@@ -68,7 +69,8 @@
       display: block;
       width: 10px;
       height: 6px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath id='ic_keyboard_arrow_down_24px' d='M7.175,7.84,11,11.549,14.825,7.84,16,8.982,11,13.84,6,8.982Z' transform='translate(-6 -7.84)' fill='%23e65100'/%3E%3C/svg%3E%0A");
+      // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath id='ic_keyboard_arrow_down_24px' d='M7.175,7.84,11,11.549,14.825,7.84,16,8.982,11,13.84,6,8.982Z' transform='translate(-6 -7.84)' fill='%23e65100'/%3E%3C/svg%3E%0A");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath id='ic_keyboard_arrow_down_24px' d='M7.175,7.84,11,11.549,14.825,7.84,16,8.982,11,13.84,6,8.982Z' transform='translate(-6 -7.84)' fill='%23ffffff'/%3E%3C/svg%3E%0A");
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
@@ -79,11 +81,11 @@
   &__drop {
     min-width: 100%;
     padding: 10px 25px;
-    background-color: #333;
+    background-color: $orange;
     border-radius: 10px;
     position: absolute;
     left: 0;
-    top: 100%;
+    top: calc(100% + 8px);
     z-index: 3;
     transform: translate(0, 50px);
     opacity: 0;
